@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX COLLECTION | Custom Art • Premium Case • Handmade Collection</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fef2f2',
+                            100: '#ffe1e1',
+                            500: '#ef4444',
+                            600: '#dc2626',
+                            700: '#b91c1c',
+                            dark: '#0f172a',
+                            accent: '#ff2e63'
+                        },
+                        graffiti: {
+                            cyan: '#00f5d4',
+                            pink: '#7b2cbf',
+                            yellow: '#ffee32',
+                            orange: '#ff9e00'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        art: ['Syne', 'sans-serif'],
+                        graffiti: ['Caveat', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Rough Plaster Wall Background with Subtle Texture */
+        .plaster-bg-light {
+            background-color: #f7f7f9;
+            background-image: 
+                radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 0),
+                radial-gradient(rgba(0, 0, 0, 0.02) 2px, transparent 0);
+            background-size: 24px 24px, 48px 48px;
+            background-position: 0 0, 12px 12px;
+        }
+
+        .dark .plaster-bg-dark {
+            background-color: #0b0f19;
+            background-image: 
+                radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0),
+                radial-gradient(rgba(255, 255, 255, 0.015) 2px, transparent 0);
+            background-size: 24px 24px, 48px 48px;
+        }
+
+        /* Glassmorphism Styles */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Graffiti Splash Accents */
+        .graffiti-accent-1 {
+            background: linear-gradient(135deg, #ff007f 0%, #7b2cbf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .graffiti-shadow {
+            text-shadow: 3px 3px 0px rgba(239, 68, 68, 0.3), -2px -2px 0px rgba(0, 245, 212, 0.3);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.05);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ef4444;
+            border-radius: 4px;
+        }
+
+        /* Custom Handheld Mockup Floating Effect */
+        @keyframes floatMockup {
+            0%, 100% { transform: translateY(0px) rotate(-1deg); }
+            50% { transform: translateY(-12px) rotate(1deg); }
+        }
+        .hero-mockup-float {
+            animation: floatMockup 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="plaster-bg-light dark:plaster-bg-dark text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 min-h-screen flex flex-col antialiased">
+
+    <!-- Toast Notification System -->
+    <div id="toastContainer" class="fixed top-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 glass-card transition-all duration-300 shadow-sm border-b border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" onclick="switchView('store')" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-600 via-pink-600 to-amber-400 p-0.5 shadow-md transform group-hover:rotate-6 transition-transform">
+                    <div class="w-full h-full bg-slate-900 rounded-[14px] flex items-center justify-center text-white font-art font-extrabold text-xl tracking-tighter">
+                        UX
+                    </div>
+                </div>
+                <div>
+                    <span class="font-art font-extrabold text-2xl tracking-tight bg-gradient-to-r from-slate-900 via-brand-600 to-purple-600 dark:from-white dark:via-brand-500 dark:to-purple-400 bg-clip-text text-transparent">
+                        UX COLLECTION
+                    </span>
+                    <span class="block text-[10px] font-semibold tracking-widest text-slate-400 dark:text-slate-400 uppercase -mt-1" data-i18n="tagline">CUSTOM ART & PREMIUM CASES</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links (Store View) -->
+            <nav id="storeNav" class="hidden md:flex items-center gap-6 font-medium text-sm">
+                <a href="#hero" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors" data-i18n="nav_home">Home</a>
+                <a href="#products" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors" data-i18n="nav_products">Produk</a>
+                <a href="#customizer" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors" data-i18n="nav_custom">Custom Design</a>
+                <a href="#gallery" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors" data-i18n="nav_gallery">Galeri & Testi</a>
+                <a href="#faq" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors" data-i18n="nav_faq">FAQ</a>
+                <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors" data-i18n="nav_contact">Kontak</a>
+            </nav>
+
+            <!-- Actions Right -->
+            <div class="flex items-center gap-3">
+                <!-- View Mode Switcher: Store vs Admin -->
+                <button onclick="toggleAdminView()" id="viewSwitcherBtn" class="flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-90 transition-all shadow-sm">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <span id="viewSwitcherText">Admin Dashboard</span>
+                </button>
+
+                <!-- Language Selector -->
+                <button onclick="toggleLanguage()" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-xs font-bold flex items-center gap-1.5" title="Switch Language">
+                    <i class="fa-solid fa-globe text-slate-500"></i>
+                    <span id="currentLangLabel">ID</span>
+                </button>
+
+                <!-- Dark Mode Toggle -->
+                <button onclick="toggleDarkMode()" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-xs font-bold" title="Toggle Theme">
+                    <i id="themeIcon" class="fa-solid fa-moon text-slate-600 dark:text-amber-400"></i>
+                </button>
+
+                <!-- Cart Button -->
+                <button id="cartBtn" onclick="toggleCartDrawer()" class="relative p-2.5 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 hover:bg-brand-500/20 transition-colors">
+                    <i class="fa-solid fa-bag-shopping text-lg"></i>
+                    <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-brand-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md">0</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-xl text-slate-700 dark:text-slate-200">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Nav -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-4 flex flex-col gap-3 font-medium text-sm">
+            <a href="#hero" onclick="toggleMobileMenu()" class="py-1">Home</a>
+            <a href="#products" onclick="toggleMobileMenu()" class="py-1">Produk</a>
+            <a href="#customizer" onclick="toggleMobileMenu()" class="py-1">Custom Design</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="py-1">Galeri & Testimoni</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="py-1">FAQ</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="py-1">Kontak</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- ================= STORE FRONT VIEW ================= -->
+        <div id="storeView">
+            
+            <section id="hero" class="relative overflow-hidden py-16 lg:py-24">
+                <!-- Graffiti Wall Background Elements -->
+                <div class="absolute top-10 left-5 text-7xl font-graffiti font-bold text-slate-300/30 dark:text-slate-700/20 -rotate-12 pointer-events-none select-none">
+                    ART WORK &bull; STREET VIBE
+                </div>
+                <div class="absolute bottom-5 right-10 text-8xl font-graffiti font-bold text-pink-500/10 -rotate-6 pointer-events-none select-none">
+                    UX COLLECTION
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <!-- Hero Text Content -->
+                        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-600 dark:text-pink-400 text-xs font-bold tracking-wide">
+                                <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span>
+                                <span data-i18n="hero_badge">100% HANDMADE & ORIGINAL GRAFFITI ART</span>
+                            </div>
+
+                            <h1 class="font-art font-extrabold text-4xl sm:text-6xl lg:text-7xl leading-tight tracking-tight text-slate-900 dark:text-white">
+                                Expression On Your <span class="graffiti-accent-1 graffiti-shadow">Case & Canvas</span>
+                            </h1>
+
+                            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed" data-i18n="hero_desc">
+                                Koleksi casing HP transparan dengan lukisan tangan grafiti asli, totebag art, dan botol custom bermutu tinggi. Setiap karya diproduksi presisi, tahan lama, dan berkarakter unik.
+                            </p>
+
+                            <!-- CTAs -->
+                            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                                <a href="#products" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-brand-600 to-pink-600 hover:from-brand-700 hover:to-pink-700 text-white font-bold text-sm shadow-lg shadow-brand-600/30 hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                    <span data-i18n="cta_shop">BELANJA SEKARANG</span>
+                                </a>
+                                <a href="#customizer" class="px-7 py-3.5 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white font-bold text-sm hover:bg-slate-800 dark:hover:bg-slate-700 border border-slate-700 transition-all flex items-center gap-2 shadow-md">
+                                    <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i>
+                                    <span data-i18n="cta_custom">CUSTOM SEKARANG</span>
+                                </a>
+                                <button onclick="openWAChat('Halo Admin UX Collection, saya ingin berkonsultasi tentang desain custom case/produk.')" class="px-5 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm transition-all flex items-center gap-2 shadow-md">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                    <span data-i18n="cta_wa">CHAT WHATSAPP</span>
+                                </button>
+                            </div>
+
+                            <!-- Trust Badges -->
+                            <div class="pt-8 grid grid-cols-3 gap-4 border-t border-slate-200 dark:border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+                                <div>
+                                    <p class="font-art font-extrabold text-2xl text-slate-900 dark:text-white">5,000+</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="stat_customized">Custom Case Terjual</p>
+                                </div>
+                                <div>
+                                    <p class="font-art font-extrabold text-2xl text-slate-900 dark:text-white">4.9/5.0</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="stat_rating">Rating Pelanggan</p>
+                                </div>
+                                <div>
+                                    <p class="font-art font-extrabold text-2xl text-slate-900 dark:text-white">100%</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="stat_handmade">Artis Lukis Handcrafted</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hero Realistic Hand Phone Mockup -->
+                        <div class="lg:col-span-5 flex justify-center relative">
+                            <!-- Background Splatter Effect -->
+                            <div class="absolute w-72 h-72 bg-gradient-to-tr from-brand-500/30 to-purple-600/30 rounded-full blur-3xl pointer-events-none"></div>
+
+                            <div class="hero-mockup-float relative max-w-sm w-full">
+                                <div class="glass-card p-4 rounded-3xl shadow-2xl relative border-2 border-white/60 dark:border-slate-700">
+                                    <div class="relative overflow-hidden rounded-2xl bg-slate-900">
+                                        <!-- Realistic Phone Mockup Image -->
+                                        <img id="heroImageDisplay" src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80" alt="UX Collection Handholding Case" class="w-full h-[450px] object-cover opacity-90 hover:scale-105 transition-transform duration-700">
+                                        
+                                        <!-- Transparent Overlay Artwork Badge -->
+                                        <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent">
+                                            <div class="inline-block px-3 py-1 rounded-lg bg-pink-500/80 text-white font-graffiti text-xl w-fit shadow-md -rotate-3 mb-2">
+                                                UX COLLECTION
+                                            </div>
+                                            <h3 class="font-art text-white text-xl font-bold">Custom Graffiti Acrylic Case</h3>
+                                            <p class="text-xs text-slate-300">Presisi anti-scratch lacquer & high detail painting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Badge -->
+                                <div class="absolute -bottom-4 -left-4 glass-card px-4 py-2.5 rounded-2xl shadow-lg border border-white/80 dark:border-slate-700 flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-500 flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-shield-halved text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-bold text-slate-900 dark:text-white">Anti-Pudar & Clear</p>
+                                        <p class="text-[10px] text-slate-500">Garansi Cetak 30 Hari</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="products" class="py-16 bg-white/50 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Section Title -->
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                        <div>
+                            <span class="text-xs font-bold text-brand-600 uppercase tracking-widest" data-i18n="catalog_subtitle">Katalog Art Eksklusif</span>
+                            <h2 class="font-art text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white" data-i18n="catalog_title">Koleksi Produk Pilihan</h2>
+                        </div>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 max-w-md">Pilih dari desain serial Manga, Realis, Mobil Legendaris, Game, maupun merchandise lukis seperti Tote Bag & Botol.</p>
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div id="categoryFilterContainer" class="flex flex-wrap gap-2.5 mb-8">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="customizer" class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            
+                            <div class="lg:col-span-6 space-y-4">
+                                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider">
+                                    <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Custom Request Studio
+                                </span>
+                                <h2 class="font-art text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+                                    Punya Foto atau Desain Sendiri?
+                                </h2>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                                    Kirim foto kesukaanmu, ilustrasi komik, atau grafiti tulisan nama. Tim pelukis UX Collection akan mengubahnya menjadi casing HP atau merchandise eksklusif!
+                                </p>
+                                <ul class="space-y-2.5 text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">
+                                    <li class="flex items-center gap-2.5">
+                                        <i class="fa-solid fa-circle-check text-emerald-500"></i> Bebas pilih tipe smartphone (iPhone, Samsung, Xiaomi, Poco, OPPO, Vivo, Infinix)
+                                    </li>
+                                    <li class="flex items-center gap-2.5">
+                                        <i class="fa-solid fa-circle-check text-emerald-500"></i> Bebas tambah nama / grafiti tulisan custom
+                                    </li>
+                                    <li class="flex items-center gap-2.5">
+                                        <i class="fa-solid fa-circle-check text-emerald-500"></i> Gratis konsultasi preview sampel desain sebelum dilukis
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Custom Order Quick Form -->
+                            <div class="lg:col-span-6">
+                                <form id="customOrderForm" onsubmit="handleCustomOrderSubmit(event)" class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 space-y-4">
+                                    <h3 class="font-bold text-lg text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3 flex items-center justify-between">
+                                        <span>Formulir Pesanan Custom</span>
+                                        <span class="text-xs font-normal text-brand-600 font-bold">Mulai Rp 120.000</span>
+                                    </h3>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-semibold mb-1">Tipe HP / Media</label>
+                                            <input type="text" id="customPhoneModel" required placeholder="Contoh: iPhone 14 Pro Max / Tote Bag" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 outline-none">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-semibold mb-1">Kategori Desain</label>
+                                            <select id="customCategorySelect" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 outline-none">
+                                                <option value="Custom Graffiti Name">Custom Graffiti Name</option>
+                                                <option value="Manga / Anime Art">Manga / Anime Art</option>
+                                                <option value="Mobil Legendaris / Otomotif">Mobil Legendaris / Otomotif</option>
+                                                <option value="Wajah / Realis Portrait">Wajah / Realis Portrait</option>
+                                                <option value="Botol / Tote Bag Lukis">Botol / Tote Bag Lukis</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-xs font-semibold mb-1">Catatan / Tulisan Nama</label>
+                                        <textarea id="customNotes" rows="2" placeholder="Tuliskan detail keinginan desain, request warna background grafiti, atau teks tulisan nama..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 outline-none"></textarea>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-xs font-semibold mb-1">Upload Referensi Desain / Gambar (Opsional)</label>
+                                        <input type="file" id="customImageFile" accept="image/*" class="w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-brand-500/10 file:text-brand-600 hover:file:bg-brand-500/20 cursor-pointer">
+                                    </div>
+
+                                    <button type="submit" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2">
+                                        <i class="fa-solid fa-cart-plus"></i> Tambah Pesanan Custom Ke Keranjang
+                                    </button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gallery" class="py-16 bg-white/40 dark:bg-slate-900/40 border-t border-slate-200/60 dark:border-slate-800/60">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                        <div>
+                            <span class="text-xs font-bold text-pink-600 uppercase tracking-widest" data-i18n="gallery_subtitle">Real Product & Community</span>
+                            <h2 class="font-art text-3xl font-extrabold text-slate-900 dark:text-white" data-i18n="gallery_title">Galeri Karya & Foto Unboxing</h2>
+                        </div>
+                        
+                        <button onclick="openUploadModal()" class="px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 font-bold text-xs flex items-center gap-2 hover:opacity-90 transition-opacity">
+                            <i class="fa-solid fa-camera"></i> Post Foto Testimoni / Unboxing
+                        </button>
+                    </div>
+
+                    <!-- Lightbox Gallery Items Grid -->
+                    <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Testimonials -->
+                    <div class="mb-16">
+                        <div class="text-center max-w-xl mx-auto mb-10">
+                            <h2 class="font-art text-3xl font-extrabold text-slate-900 dark:text-white">Apa Kata Pelanggan Kami?</h2>
+                            <p class="text-xs sm:text-sm text-slate-500 mt-1">Ulasan riil dari para pembeli casing & merchandise UX Collection.</p>
+                        </div>
+                        <div id="testimonialContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div id="faq" class="max-w-3xl mx-auto pt-8">
+                        <div class="text-center mb-8">
+                            <h2 class="font-art text-3xl font-extrabold text-slate-900 dark:text-white">Pertanyaan Sering Diajukan (FAQ)</h2>
+                            <p class="text-xs sm:text-sm text-slate-500 mt-1">Informasi pengerjaan, ketahanan cat, pengiriman, dan garansi.</p>
+                        </div>
+
+                        <div id="faqContainer" class="space-y-3">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="contact" class="bg-slate-900 text-slate-300 border-t border-slate-800 pt-16 pb-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+                        <!-- Brand Info -->
+                        <div class="md:col-span-4 space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center font-art font-extrabold text-white text-lg">
+                                    UX
+                                </div>
+                                <span class="font-art font-extrabold text-xl text-white">UX COLLECTION</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Galeri Seni Custom Case HP & Artwork Handmade Premium. Menggunakan bahan akrilik berkualitas, cat anti-luntur, dan dikerjakan oleh seniman grafiti berpengalaman.
+                            </p>
+                            <!-- Social Media Links -->
+                            <div class="flex items-center gap-3 pt-2">
+                                <a id="footerWA" href="#" target="_blank" class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a id="footerIG" href="#" target="_blank" class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                                <a id="footerTikTok" href="#" target="_blank" class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-slate-700 hover:text-white transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                                <a id="footerFB" href="#" target="_blank" class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="md:col-span-2 space-y-3">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-white">Navigasi</h4>
+                            <ul class="space-y-2 text-xs text-slate-400">
+                                <li><a href="#hero" class="hover:text-white">Beranda</a></li>
+                                <li><a href="#products" class="hover:text-white">Katalog Produk</a></li>
+                                <li><a href="#customizer" class="hover:text-white">Custom Studio</a></li>
+                                <li><a href="#gallery" class="hover:text-white">Galeri Unboxing</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="md:col-span-3 space-y-3">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-white">Kategori Populer</h4>
+                            <ul class="space-y-2 text-xs text-slate-400">
+                                <li><span>Manga & Anime Collection</span></li>
+                                <li><span>Mobil Legendaris Series</span></li>
+                                <li><span>Realis Portrait Custom</span></li>
+                                <li><span>Tote Bag & Botol Lukis</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Office Address -->
+                        <div class="md:col-span-3 space-y-3">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-white">Alamat Kantor Studio</h4>
+                            <p id="footerAddress" class="text-xs text-slate-400 leading-relaxed">
+                                Perum Alana Village Pabedilan, Ciledug - Cirebon - Jawa Barat.
+                            </p>
+                            <div class="pt-2 text-xs text-slate-400 space-y-1">
+                                <p><i class="fa-solid fa-phone text-brand-500 mr-1.5"></i> <span id="footerPhoneDisplay">+62 812-3456-7890</span></p>
+                                <p><i class="fa-solid fa-envelope text-brand-500 mr-1.5"></i> support@uxcollection.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                        <p>&copy; 2026 UX COLLECTION. All rights reserved. cPanel Native Compatible.</p>
+                        <p class="text-[11px]">Designed with Modern Art Gallery Concept &amp; Glassmorphism</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- ================= ADMIN DASHBOARD VIEW ================= -->
+        <div id="adminView" class="hidden p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-8">
+            <!-- Admin View Header -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-900 text-white p-6 rounded-3xl shadow-xl">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2.5 py-0.5 rounded-full bg-brand-500 text-[10px] font-bold uppercase">Control Panel v5.0</span>
+                        <span class="text-xs text-slate-400">Office: Ciledug - Cirebon</span>
+                    </div>
+                    <h1 class="font-art text-2xl sm:text-3xl font-extrabold mt-1">UX Collection Admin Studio</h1>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <button onclick="switchView('store')" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold transition-colors">
+                        <i class="fa-solid fa-store mr-1.5"></i> Kembali Ke Store
+                    </button>
+                    <button onclick="exportProjectFiles()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-brand-600 to-pink-600 text-white text-xs font-bold hover:opacity-90 transition-opacity flex items-center gap-1.5 shadow-md">
+                        <i class="fa-solid fa-download"></i> Export cPanel Project Code &amp; SQL
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Stats Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="glass-card p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <p class="text-xs text-slate-500">Total Pesanan</p>
+                    <p id="statTotalOrders" class="font-art font-extrabold text-2xl text-slate-900 dark:text-white mt-1">0</p>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <p class="text-xs text-amber-500 font-medium">Menunggu Bayar</p>
+                    <p id="statPendingPayment" class="font-art font-extrabold text-2xl text-amber-500 mt-1">0</p>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <p class="text-xs text-emerald-500 font-medium">Lunas</p>
+                    <p id="statLunas" class="font-art font-extrabold text-2xl text-emerald-500 mt-1">0</p>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <p class="text-xs text-purple-500 font-medium">Sedang Digambar</p>
+                    <p id="statInProduction" class="font-art font-extrabold text-2xl text-purple-500 mt-1">0</p>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <p class="text-xs text-blue-500 font-medium">Dikirim / Packing</p>
+                    <p id="statShipping" class="font-art font-extrabold text-2xl text-blue-500 mt-1">0</p>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <p class="text-xs text-slate-500">Total Omset</p>
+                    <p id="statTotalRevenue" class="font-art font-extrabold text-xl text-slate-900 dark:text-white mt-1">Rp 0</p>
+                </div>
+            </div>
+
+            <!-- Admin Tabs Navigation -->
+            <div class="border-b border-slate-200 dark:border-slate-800 flex gap-4 overflow-x-auto pb-2">
+                <button onclick="switchAdminTab('orders')" id="tabBtn-orders" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-600 text-white whitespace-nowrap">
+                    <i class="fa-solid fa-cart-flatbed mr-1.5"></i> Manajemen Pesanan
+                </button>
+                <button onclick="switchAdminTab('products')" id="tabBtn-products" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 whitespace-nowrap">
+                    <i class="fa-solid fa-box-open mr-1.5"></i> Kelola Produk & Kategori
+                </button>
+                <button onclick="switchAdminTab('filemanager')" id="tabBtn-filemanager" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 whitespace-nowrap">
+                    <i class="fa-solid fa-folder-open mr-1.5"></i> File Manager (assets/uploads)
+                </button>
+                <button onclick="switchAdminTab('settings')" id="tabBtn-settings" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 whitespace-nowrap">
+                    <i class="fa-solid fa-sliders mr-1.5"></i> Pengaturan Toko & QRIS
+                </button>
+                <button onclick="switchAdminTab('schema')" id="tabBtn-schema" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 whitespace-nowrap">
+                    <i class="fa-solid fa-database mr-1.5"></i> Database MySQL Schema
+                </button>
+            </div>
+
+            <!-- Admin Tab: Orders -->
+            <div id="adminTab-orders" class="admin-tab-content space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-art font-bold text-lg">Daftar Pesanan masuk</h3>
+                    <div class="flex gap-2">
+                        <input type="text" id="orderSearchInput" onkeyup="filterOrdersTable()" placeholder="Cari No Pesanan / Nama..." class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs">
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 font-bold border-b border-slate-200 dark:border-slate-700">
+                            <tr>
+                                <th class="p-3.5">No. Pesanan</th>
+                                <th class="p-3.5">Pelanggan</th>
+                                <th class="p-3.5">Item</th>
+                                <th class="p-3.5">Total Nominal</th>
+                                <th class="p-3.5">Waktu</th>
+                                <th class="p-3.5">Status Order</th>
+                                <th class="p-3.5 text-center">Aksi Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminOrdersTableBody" class="divide-y divide-slate-200 dark:divide-slate-800">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Admin Tab: Products -->
+            <div id="adminTab-products" class="admin-tab-content hidden space-y-6">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-art font-bold text-lg">Manajemen Produk &amp; Promo</h3>
+                    <button onclick="openProductModal()" class="px-4 py-2 rounded-xl bg-brand-600 text-white text-xs font-bold hover:bg-brand-700">
+                        <i class="fa-solid fa-plus mr-1"></i> Tambah Produk Baru
+                    </button>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 font-bold">
+                            <tr>
+                                <th class="p-3.5">Gambar</th>
+                                <th class="p-3.5">Nama Produk</th>
+                                <th class="p-3.5">Kategori</th>
+                                <th class="p-3.5">Harga</th>
+                                <th class="p-3.5">Stok</th>
+                                <th class="p-3.5">Promo</th>
+                                <th class="p-3.5 text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminProductsTableBody" class="divide-y divide-slate-200 dark:divide-slate-800">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Admin Tab: File Manager -->
+            <div id="adminTab-filemanager" class="admin-tab-content hidden space-y-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="font-art font-bold text-lg">File Manager (assets/uploads/)</h3>
+                        <p class="text-xs text-slate-500">Kelola berkas media yang tersimpan di cPanel hosting.</p>
+                    </div>
+                    <button onclick="simulateFileUpload()" class="px-4 py-2 rounded-xl bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 text-xs font-bold">
+                        <i class="fa-solid fa-upload mr-1"></i> Upload File Gambar
+                    </button>
+                </div>
+
+                <div id="fileManagerGrid" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Admin Tab: Settings -->
+            <div id="adminTab-settings" class="admin-tab-content hidden space-y-6">
+                <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 max-w-3xl">
+                    <h3 class="font-art font-bold text-lg border-b border-slate-200 dark:border-slate-800 pb-3 mb-4">Pengaturan Toko &amp; Payment Gateway</h3>
+                    
+                    <form onsubmit="saveStoreSettings(event)" class="space-y-4 text-xs">
+                        <div>
+                            <label class="block font-semibold mb-1">Nama Toko</label>
+                            <input type="text" id="settingStoreName" value="UX COLLECTION" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-1">Tagline Toko</label>
+                            <input type="text" id="settingTagline" value="Custom Art • Premium Case • Handmade Collection" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-1">Alamat Kantor Studio</label>
+                            <textarea id="settingAddress" rows="2" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">Perum Alana Village Pabedilan, Ciledug - Cirebon - Jawa Barat.</textarea>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-semibold mb-1">Nomor WhatsApp Business</label>
+                                <input type="text" id="settingWA" value="+6281234567890" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+                            </div>
+                            <div>
+                                <label class="block font-semibold mb-1">Instagram Link</label>
+                                <input type="text" id="settingIG" value="https://instagram.com/uxcollection" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block font-semibold mb-1">QRIS Dinamis API Key / Mode Simulation</label>
+                            <input type="text" value="UX_PAY_LIVE_API_KEY_99882211" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-mono">
+                        </div>
+
+                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-700">
+                            Simpan Pengaturan
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Admin Tab: Schema -->
+            <div id="adminTab-schema" class="admin-tab-content hidden space-y-4">
+                <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 mb-4">
+                        <h3 class="font-art font-bold text-lg">Struktur Database MySQL (`ux_collection_db.sql`)</h3>
+                        <button onclick="copySchemaSQL()" class="px-3 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-bold">
+                            <i class="fa-solid fa-copy mr-1"></i> Copy SQL Schema
+                        </button>
+                    </div>
+
+                    <pre id="sqlSchemaCode" class="bg-slate-950 text-emerald-400 p-4 rounded-xl text-[11px] font-mono overflow-x-auto max-h-96">
+-- UX COLLECTION MySQL Database Schema for PHP 8+ cPanel Hosting
+CREATE DATABASE IF NOT EXISTS `ux_collection_db`;
+USE `ux_collection_db`;
+
+CREATE TABLE `categories` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(100) NOT NULL,
+  `slug` VARCHAR(100) NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE `products` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `category_id` INT,
+  `title` VARCHAR(255) NOT NULL,
+  `price` DECIMAL(12,2) NOT NULL,
+  `promo_price` DECIMAL(12,2) DEFAULT NULL,
+  `stock` INT DEFAULT 10,
+  `badge` VARCHAR(50),
+  `image` VARCHAR(255),
+  `description` TEXT,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (`category_id`) REFERENCES `categories`(`id`) ON DELETE SET NULL
+);
+
+CREATE TABLE `orders` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `order_number` VARCHAR(50) UNIQUE NOT NULL,
+  `customer_name` VARCHAR(100) NOT NULL,
+  `whatsapp` VARCHAR(30) NOT NULL,
+  `address` TEXT NOT NULL,
+  `province` VARCHAR(100),
+  `city` VARCHAR(100),
+  `postal_code` VARCHAR(20),
+  `subtotal` DECIMAL(12,2),
+  `shipping_cost` DECIMAL(12,2),
+  `total_amount` DECIMAL(12,2),
+  `payment_method` VARCHAR(50),
+  `status` ENUM('Menunggu Pembayaran','Lunas','Diproses','Sedang Digambar','Sedang Dicetak','Packing','Dikirim','Selesai') DEFAULT 'Menunggu Pembayaran',
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE `payments` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `order_id` INT NOT NULL,
+  `qr_payload` TEXT,
+  `transaction_id` VARCHAR(100),
+  `payment_status` VARCHAR(50) DEFAULT 'PENDING',
+  `paid_at` DATETIME NULL,
+  FOREIGN KEY (`order_id`) REFERENCES `orders`(`id`) ON DELETE CASCADE
+);
+
+CREATE TABLE `settings` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `setting_key` VARCHAR(100) UNIQUE NOT NULL,
+  `setting_value` TEXT
+);
+                    </pre>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= SHOPPING CART DRAWER ================= -->
+    <div id="cartDrawerOverlay" onclick="toggleCartDrawer()" class="fixed inset-0 bg-slate-950/50 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+    <div id="cartDrawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white dark:bg-slate-900 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+        <!-- Cart Header -->
+        <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-bag-shopping text-brand-600 text-lg"></i>
+                <h3 class="font-art font-bold text-lg">Keranjang Belanja</h3>
+            </div>
+            <button onclick="toggleCartDrawer()" class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cartItemsContainer" class="flex-grow overflow-y-auto p-5 space-y-4 divide-y divide-slate-100 dark:divide-slate-800">
+            <!-- Populated by JS -->
+        </div>
+
+        <!-- Cart Summary & Voucher -->
+        <div class="p-5 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/80 space-y-3">
+            <!-- Voucher Input -->
+            <div class="flex gap-2">
+                <input type="text" id="voucherCodeInput" placeholder="Kode Promo (mis: UX2026)" class="flex-grow px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-mono uppercase">
+                <button onclick="applyVoucherCode()" class="px-4 py-2 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded-xl text-xs font-bold hover:opacity-90">
+                    Gunakan
+                </button>
+            </div>
+
+            <div class="space-y-1.5 text-xs text-slate-600 dark:text-slate-400 pt-2">
+                <div class="flex justify-between">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal" class="font-semibold text-slate-900 dark:text-white">Rp 0</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Diskon Voucher:</span>
+                    <span id="cartDiscount" class="font-semibold text-emerald-500">Rp 0</span>
+                </div>
+                <div class="flex justify-between text-sm font-bold text-slate-900 dark:text-white border-t border-slate-200 dark:border-slate-800 pt-2">
+                    <span>Total Estimated:</span>
+                    <span id="cartTotal" class="text-brand-600">Rp 0</span>
+                </div>
+            </div>
+
+            <button onclick="openCheckoutModal()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-brand-600 to-pink-600 hover:from-brand-700 hover:to-pink-700 text-white font-bold text-sm shadow-lg transition-all flex items-center justify-center gap-2">
+                <span>Lanjut Ke Checkout</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ================= CHECKOUT MODAL ================= -->
+    <div id="checkoutModal" class="fixed inset-0 z-50 hidden bg-slate-950/60 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 relative">
+            <button onclick="closeCheckoutModal()" class="absolute top-5 right-5 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <h2 class="font-art text-2xl font-extrabold mb-1">Checkout &amp; Pengiriman</h2>
+            <p class="text-xs text-slate-500 mb-6">Lengkapi alamat pengiriman untuk menghitung estimasi ongkir otomatis.</p>
+
+            <form id="checkoutForm" onsubmit="handleCheckoutSubmit(event)" class="space-y-4 text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-semibold mb-1">Nama Lengkap</label>
+                        <input type="text" id="checkoutName" required placeholder="Budi Santoso" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Nomor WhatsApp Active</label>
+                        <input type="tel" id="checkoutPhone" required placeholder="081234567890" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block font-semibold mb-1">Provinsi</label>
+                        <select id="checkoutProvince" onchange="calculateShippingFee()" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 outline-none">
+                            <option value="Jawa Barat">Jawa Barat</option>
+                            <option value="DKI Jakarta">DKI Jakarta</option>
+                            <option value="Jawa Tengah">Jawa Tengah</option>
+                            <option value="Jawa Timur">Jawa Timur</option>
+                            <option value="Banten">Banten</option>
+                            <option value="Luar Jawa">Luar Jawa</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Kota / Kabupaten</label>
+                        <input type="text" id="checkoutCity" required placeholder="Cirebon / Jakarta" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Kode Pos</label>
+                        <input type="text" id="checkoutPostal" placeholder="45188" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-semibold mb-1">Alamat Lengkap</label>
+                    <textarea id="checkoutAddress" required rows="2" placeholder="Nama Jalan, No. Rumah, RT/RW, Kecamatan..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 outline-none"></textarea>
+                </div>
+
+                <!-- Payment Method Selector -->
+                <div>
+                    <label class="block font-semibold mb-2">Metode Pembayaran</label>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                        <label class="border-2 border-brand-500 bg-brand-500/5 p-3 rounded-xl cursor-pointer flex flex-col items-center justify-center gap-1">
+                            <input type="radio" name="paymentMethod" value="QRIS Dinamis" checked class="hidden">
+                            <i class="fa-solid fa-qrcode text-brand-600 text-xl"></i>
+                            <span class="font-bold text-[11px]">QRIS Dinamis</span>
+                        </label>
+                        <label class="border border-slate-300 dark:border-slate-700 p-3 rounded-xl cursor-pointer flex flex-col items-center justify-center gap-1 hover:border-brand-500">
+                            <input type="radio" name="paymentMethod" value="Transfer Bank" class="hidden">
+                            <i class="fa-solid fa-building-columns text-slate-600 text-xl"></i>
+                            <span class="font-bold text-[11px]">Transfer Bank</span>
+                        </label>
+                        <label class="border border-slate-300 dark:border-slate-700 p-3 rounded-xl cursor-pointer flex flex-col items-center justify-center gap-1 hover:border-brand-500">
+                            <input type="radio" name="paymentMethod" value="Virtual Account" class="hidden">
+                            <i class="fa-solid fa-credit-card text-slate-600 text-xl"></i>
+                            <span class="font-bold text-[11px]">Virtual Account</span>
+                        </label>
+                        <label class="border border-slate-300 dark:border-slate-700 p-3 rounded-xl cursor-pointer flex flex-col items-center justify-center gap-1 hover:border-brand-500">
+                            <input type="radio" name="paymentMethod" value="E-Wallet" class="hidden">
+                            <i class="fa-solid fa-wallet text-slate-600 text-xl"></i>
+                            <span class="font-bold text-[11px]">E-Wallet</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Order Pricing Breakdown -->
+                <div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-800 space-y-2 text-xs">
+                    <div class="flex justify-between">
+                        <span>Ongkir Estimasi (API Ready):</span>
+                        <span id="checkoutShippingFee" class="font-semibold">Rp 15.000</span>
+                    </div>
+                    <div class="flex justify-between text-base font-bold border-t border-slate-200 dark:border-slate-700 pt-2 text-brand-600">
+                        <span>Total Bayar:</span>
+                        <span id="checkoutGrandTotal">Rp 0</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-lock"></i> Generate Pembayaran QRIS Dinamis
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= DYNAMIC QRIS & AUTO PAYMENT MODAL ================= -->
+    <div id="qrisModal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-md w-full shadow-2xl border border-slate-200 dark:border-slate-800 p-6 text-center space-y-4 relative">
+            
+            <div class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 font-bold text-xs uppercase tracking-wider">
+                <i class="fa-solid fa-bolt mr-1"></i> QRIS Dinamis Auto Payment
+            </div>
+
+            <h3 id="qrisOrderNum" class="font-art text-xl font-bold">ORD-UX-2026-001</h3>
+
+            <!-- Simulated Dynamic QR Code Matrix -->
+            <div class="p-4 bg-white rounded-2xl shadow-inner border border-slate-200 inline-block">
+                <div class="relative w-56 h-56 bg-white flex flex-col items-center justify-center p-2 border-2 border-dashed border-slate-300 rounded-xl">
+                    <img id="qrisImage" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=UXCOLLECTION_PAYMENT_SIMULATION" alt="QRIS Dinamis" class="w-48 h-48 object-contain">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
+                        <span class="font-art font-extrabold text-2xl text-slate-900">UX ART</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-xs text-slate-500">Scan QRIS menggunakan GoPay, OVO, ShopeePay, Dana, atau Mobile Banking.</p>
+                <p id="qrisPayAmount" class="text-2xl font-extrabold font-art text-brand-600 mt-1">Rp 165.000</p>
+            </div>
+
+            <!-- Auto Payment Webhook Simulation Trigger -->
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 space-y-2 text-left">
+                <p class="text-[11px] font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                    <i class="fa-solid fa-server text-brand-500"></i> Simulasi Webhook Payment Gateway:
+                </p>
+                <p class="text-[10px] text-slate-500">Klik tombol di bawah untuk meniru notifikasi callback dari API Payment Gateway bahwa pembayar telah sukses melakukan transfer.</p>
+                
+                <button onclick="simulatePaymentWebhookSuccess()" class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-circle-check"></i> Simulasi Webhook: Bayar Lunas Sekarang
+                </button>
+            </div>
+
+            <button onclick="closeQRISModal()" class="text-xs text-slate-400 hover:text-slate-600 underline">
+                Tutup &amp; Bayar Nanti
+            </button>
+        </div>
+    </div>
+
+    <!-- ================= FLOATING WHATSAPP BOT WIDGET ================= -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <!-- Chat Popup Box -->
+        <div id="waChatWindow" class="hidden mb-4 w-80 sm:w-96 glass-card rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col">
+            <!-- Header -->
+            <div class="bg-emerald-600 text-white p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-xl">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">UX Collection Bot</h4>
+                        <span class="text-[10px] text-emerald-100 flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-ping"></span> Online 24/7 Auto-Assistant
+                        </span>
+                    </div>
+                </div>
+                <button onclick="toggleWABotWindow()" class="text-white hover:text-emerald-200">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Bot Messages Body -->
+            <div id="waBotMessageBody" class="p-4 h-72 overflow-y-auto space-y-3 bg-slate-50/50 dark:bg-slate-900/50 text-xs">
+                <div class="bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 max-w-[85%] space-y-1">
+                    <p class="font-bold text-emerald-600">Bot Assistant:</p>
+                    <p class="text-slate-700 dark:text-slate-200">Halo, selamat datang di UX Collection 👋<br>Silakan pilih menu bantuan di bawah:</p>
+                </div>
+            </div>
+
+            <!-- Interactive Quick Options -->
+            <div class="p-3 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 gap-2 text-[11px]">
+                <button onclick="handleWABotMenu('cek_pesanan')" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium text-left">
+                    📦 Cek Pesanan
+                </button>
+                <button onclick="handleWABotMenu('cara_order')" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium text-left">
+                    💡 Cara Order
+                </button>
+                <button onclick="handleWABotMenu('custom_desain')" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium text-left">
+                    🎨 Custom Desain
+                </button>
+                <button onclick="handleWABotMenu('hubungi_admin')" class="p-2 rounded-xl bg-emerald-600 text-white font-medium text-center col-span-1">
+                    💬 Chat Admin WA
+                </button>
+            </div>
+        </div>
+
+        <!-- Floating Button Trigger -->
+        <button onclick="toggleWABotWindow()" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl flex items-center justify-center text-2xl hover:scale-105 transition-transform group relative">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-brand-500 border-2 border-white"></span>
+        </button>
+    </div>
+
+    <script>
+        /* ================= GLOBAL APPLICATION STATE ================= */
+        const APP_STATE = {
+            lang: 'ID',
+            theme: 'light',
+            view: 'store', // 'store' or 'admin'
+            adminTab: 'orders',
+            cart: [],
+            voucherDiscount: 0,
+            
+            categories: [
+                { id: 'all', name: 'Semua Produk' },
+                { id: 'manga', name: 'Manga' },
+                { id: 'realis', name: 'Realis' },
+                { id: 'mobil', name: 'Mobil Legendaris' },
+                { id: 'game', name: 'Game' },
+                { id: 'totebag', name: 'Tote Bag Lukis' },
+                { id: 'botol', name: 'Botol Lukis' },
+                { id: 'custom', name: 'Produk Custom' }
+            ],
+
+            products: [
+                {
+                    id: 1,
+                    category: 'manga',
+                    title: 'Custom Case Manga Cyber Ninja',
+                    price: 135000,
+                    promoPrice: 119000,
+                    stock: 15,
+                    badge: 'BEST SELLER',
+                    image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=600&q=80',
+                    desc: 'Casing transparan akrilik presisi dengan lukisan seni manga cyberpunk.'
+                },
+                {
+                    id: 2,
+                    category: 'mobil',
+                    title: 'Case HP Legend Skyline GTR-R34',
+                    price: 145000,
+                    promoPrice: 129000,
+                    stock: 8,
+                    badge: 'HOT',
+                    image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80',
+                    desc: 'Lukisan tangan detail rincian mobil impian JDM mania.'
+                },
+                {
+                    id: 3,
+                    category: 'totebag',
+                    title: 'Tote Bag Lukis Canvas Graffiti',
+                    price: 160000,
+                    promoPrice: null,
+                    stock: 20,
+                    badge: 'HANDMADE',
+                    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80',
+                    desc: 'Bahan kanvas tebal 100% diproses lukis grafiti orisinal anti-air.'
+                },
+                {
+                    id: 4,
+                    category: 'realis',
+                    title: 'Custom Case Wajah Realis Portrait',
+                    price: 175000,
+                    promoPrice: 149000,
+                    stock: 5,
+                    badge: 'PREMIUM',
+                    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80',
+                    desc: 'Sentuhan lukis sketsa wajah realistis dengan gradasi halus.'
+                },
+                {
+                    id: 5,
+                    category: 'botol',
+                    title: 'Botol Tumbler Stainless Art Graffiti',
+                    price: 185000,
+                    promoPrice: 165000,
+                    stock: 12,
+                    badge: 'LIMITED',
+                    image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80',
+                    desc: 'Keep cold 12 hours. Dibalut lukisan spray graffiti kustom.'
+                },
+                {
+                    id: 6,
+                    category: 'game',
+                    title: 'Case Smartphone Mecha Warfare',
+                    price: 130000,
+                    promoPrice: null,
+                    stock: 25,
+                    badge: 'POPULAR',
+                    image: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80',
+                    desc: 'Karakter favorit game konsol dalam casing transparan tebal.'
+                }
+            ],
+
+            gallery: [
+                { id: 1, title: 'Custom Case GTR R34 Finish', img: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80', type: 'Work' },
+                { id: 2, title: 'Unboxing Paket UX Collection', img: 'https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80', type: 'Customer' },
+                { id: 3, title: 'Tote Bag Canvas Art', img: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80', type: 'Work' },
+                { id: 4, title: 'Manga Case Transparency Test', img: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=600&q=80', type: 'Customer' }
+            ],
+
+            testimonials: [
+                { id: 1, name: 'Rian Pratama', city: 'Bandung', text: 'Gokil banget hasil lukisan case GTR-nya! Cat tahan banting, udah 4 bulan dipake gak ngelupas.', stars: 5 },
+                { id: 2, name: 'Siti Sarah', city: 'Jakarta', text: 'Tote bag lukisnya jadi bahan pusat perhatian di kampus. Rapih & seniman UX COLLECTION ramah banget konsultasinya.', stars: 5 },
+                { id: 3, name: 'Dimas Ardiansyah', city: 'Surabaya', text: 'Proses QRIS dinamis serba otomatis, bayar 2 detik langsung berubah LUNAS di sistem. Mantap!', stars: 5 }
+            ],
+
+            faqs: [
+                { q: 'Berapa lama pengerjaan custom casing HP?', a: 'Pengerjaan reguler membutuhkan waktu 2-4 hari kerja tergantung kerumitan gambar.' },
+                { q: 'Apakah cat pada casing atau botol bisa terkelupas / luntur?', a: 'Tidak. Kami menggunakan coating varnish akrilik khusus anti-scratch & waterproof.' },
+                { q: 'Apakah lokasi studio bisa dikunjungi langsung?', a: 'Bisa! Alamat studio kami di Perum Alana Village Pabedilan, Ciledug - Cirebon - Jawa Barat.' }
+            ],
+
+            orders: [
+                {
+                    orderNumber: 'ORD-UX-2026-901',
+                    customerName: 'Budi Santoso',
+                    whatsapp: '081299887766',
+                    itemsSummary: 'Case HP Legend Skyline GTR-R34 (1x)',
+                    totalAmount: 144000,
+                    time: '2026-08-02 10:15',
+                    status: 'Lunas'
+                },
+                {
+                    orderNumber: 'ORD-UX-2026-902',
+                    customerName: 'Aulia Rahma',
+                    whatsapp: '085711223344',
+                    itemsSummary: 'Tote Bag Lukis Canvas (1x)',
+                    totalAmount: 175000,
+                    time: '2026-08-02 11:30',
+                    status: 'Menunggu Pembayaran'
+                }
+            ],
+
+            settings: {
+                storeName: 'UX COLLECTION',
+                tagline: 'Custom Art • Premium Case • Handmade Collection',
+                address: 'Perum Alana Village Pabedilan, Ciledug - Cirebon - Jawa Barat.',
+                phone: '+6281234567890'
+            }
+        };
+
+        // Translations
+        const I18N = {
+            ID: {
+                tagline: "CUSTOM ART & PREMIUM CASES",
+                nav_home: "Home",
+                nav_products: "Produk",
+                nav_custom: "Custom Design",
+                nav_gallery: "Galeri & Testi",
+                nav_faq: "FAQ",
+                nav_contact: "Kontak",
+                hero_badge: "100% HANDMADE & ORIGINAL GRAFFITI ART",
+                hero_desc: "Koleksi casing HP transparan dengan lukisan tangan grafiti asli, totebag art, dan botol custom bermutu tinggi.",
+                cta_shop: "BELANJA SEKARANG",
+                cta_custom: "CUSTOM SEKARANG",
+                cta_wa: "CHAT WHATSAPP",
+                stat_customized: "Custom Case Terjual",
+                stat_rating: "Rating Pelanggan",
+                stat_handmade: "Artis Lukis Handcrafted",
+                catalog_subtitle: "Katalog Art Eksklusif",
+                catalog_title: "Koleksi Produk Pilihan",
+                gallery_subtitle: "Real Product & Community",
+                gallery_title: "Galeri Karya & Foto Unboxing"
+            },
+            EN: {
+                tagline: "CUSTOM ART & PREMIUM CASES",
+                nav_home: "Home",
+                nav_products: "Products",
+                nav_custom: "Custom Design",
+                nav_gallery: "Gallery & Reviews",
+                nav_faq: "FAQ",
+                nav_contact: "Contact",
+                hero_badge: "100% HANDMADE & ORIGINAL GRAFFITI ART",
+                hero_desc: "Collection of clear smartphone cases handpainted with authentic graffiti artwork, tote bags & custom bottles.",
+                cta_shop: "SHOP NOW",
+                cta_custom: "CUSTOM NOW",
+                cta_wa: "WHATSAPP CHAT",
+                stat_customized: "Custom Cases Sold",
+                stat_rating: "Customer Rating",
+                stat_handmade: "Handcrafted Artists",
+                catalog_subtitle: "Exclusive Art Catalog",
+                catalog_title: "Featured Collections",
+                gallery_subtitle: "Real Product & Community",
+                gallery_title: "Art Gallery & Unboxing Photos"
+            }
+        };
+
+        window.onload = function() {
+            renderCategoryFilters();
+            renderProducts('all');
+            renderGallery();
+            renderTestimonials();
+            renderFaqs();
+            renderAdminOrdersTable();
+            renderAdminProductsTable();
+            renderFileManager();
+            updateCartBadge();
+            updateAdminStats();
+        };
+
+        /* Multi Language Toggle */
+        function toggleLanguage() {
+            APP_STATE.lang = APP_STATE.lang === 'ID' ? 'EN' : 'ID';
+            document.getElementById('currentLangLabel').innerText = APP_STATE.lang;
+            
+            const keys = Object.keys(I18N[APP_STATE.lang]);
+            keys.forEach(key => {
+                const el = document.querySelector(`[data-i18n="${key}"]`);
+                if (el) el.innerText = I18N[APP_STATE.lang][key];
+            });
+
+            showToast(`Bahasa diubah ke ${APP_STATE.lang === 'ID' ? 'Bahasa Indonesia' : 'English'}`);
+        }
+
+        /* Dark / Light Mode Toggle */
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.className = 'fa-solid fa-moon text-slate-600';
+                APP_STATE.theme = 'light';
+            } else {
+                html.classList.add('dark');
+                icon.className = 'fa-solid fa-sun text-amber-400';
+                APP_STATE.theme = 'dark';
+            }
+        }
+
+        /* View Switcher: Storefront vs Admin Panel */
+        function toggleAdminView() {
+            if (APP_STATE.view === 'store') {
+                switchView('admin');
+            } else {
+                switchView('store');
+            }
+        }
+
+        function switchView(target) {
+            APP_STATE.view = target;
+            const storeView = document.getElementById('storeView');
+            const adminView = document.getElementById('adminView');
+            const switcherText = document.getElementById('viewSwitcherText');
+
+            if (target === 'admin') {
+                storeView.classList.add('hidden');
+                adminView.classList.remove('hidden');
+                switcherText.innerText = 'Store View';
+                showToast('Beralih ke Admin Dashboard Studio');
+            } else {
+                adminView.classList.add('hidden');
+                storeView.classList.remove('hidden');
+                switcherText.innerText = 'Admin Dashboard';
+            }
+        }
+
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `pointer-events-auto px-4 py-3 rounded-2xl shadow-xl border text-xs font-bold flex items-center gap-2 transform transition-all duration-300 translate-y-2 bg-slate-900 text-white border-slate-700`;
+            
+            toast.innerHTML = `<i class="fa-solid fa-circle-info text-brand-500"></i> <span>${message}</span>`;
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', '-translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        function renderCategoryFilters() {
+            const container = document.getElementById('categoryFilterContainer');
+            container.innerHTML = APP_STATE.categories.map(cat => `
+                <button onclick="filterProducts('${cat.id}')" id="catBtn-${cat.id}" class="cat-filter-btn px-4 py-2 rounded-2xl text-xs font-bold transition-all border ${cat.id === 'all' ? 'bg-brand-600 text-white border-brand-600' : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-brand-500'}">
+                    ${cat.name}
+                </button>
+            `).join('');
+        }
+
+        function filterProducts(catId) {
+            document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+                btn.className = 'cat-filter-btn px-4 py-2 rounded-2xl text-xs font-bold transition-all border bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-brand-500';
+            });
+            const selected = document.getElementById(`catBtn-${catId}`);
+            if (selected) {
+                selected.className = 'cat-filter-btn px-4 py-2 rounded-2xl text-xs font-bold transition-all border bg-brand-600 text-white border-brand-600';
+            }
+            renderProducts(catId);
+        }
+
+        function renderProducts(catId = 'all') {
+            const container = document.getElementById('productGrid');
+            const filtered = catId === 'all' ? APP_STATE.products : APP_STATE.products.filter(p => p.category === catId);
+            
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="col-span-full text-center py-10 text-slate-400 text-xs">Belum ada produk di kategori ini.</div>`;
+                return;
+            }
+
+            container.innerHTML = filtered.map(p => `
+                <div class="glass-card rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800/80 shadow-md group hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="relative overflow-hidden h-52 bg-slate-900">
+                        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        ${p.badge ? `<span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-pink-600 text-white font-art font-extrabold text-[10px] uppercase shadow-md">${p.badge}</span>` : ''}
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between space-y-3">
+                        <div>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">${p.category}</span>
+                            <h3 class="font-bold text-sm text-slate-900 dark:text-white line-clamp-1 mt-0.5">${p.title}</h3>
+                            <p class="text-xs text-slate-500 line-clamp-2 mt-1">${p.desc}</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+                            <div>
+                                ${p.promoPrice ? `
+                                    <span class="text-[11px] text-slate-400 line-through">Rp ${p.price.toLocaleString('id-ID')}</span>
+                                    <p class="font-art font-extrabold text-base text-brand-600">Rp ${p.promoPrice.toLocaleString('id-ID')}</p>
+                                ` : `
+                                    <p class="font-art font-extrabold text-base text-slate-900 dark:text-white">Rp ${p.price.toLocaleString('id-ID')}</p>
+                                `}
+                            </div>
+                            <button onclick="addToCart(${p.id})" class="p-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold transition-all shadow-md">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addToCart(productId) {
+            const product = APP_STATE.products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = APP_STATE.cart.find(item => item.id === productId);
+            if (existing) {
+                existing.qty++;
+            } else {
+                APP_STATE.cart.push({
+                    id: product.id,
+                    title: product.title,
+                    price: product.promoPrice || product.price,
+                    image: product.image,
+                    qty: 1
+                });
+            }
+
+            updateCartBadge();
+            renderCartItems();
+            showToast(`"${product.title}" ditambahkan ke keranjang`);
+        }
+
+        function updateCartBadge() {
+            const totalQty = APP_STATE.cart.reduce((sum, i) => sum + i.qty, 0);
+            document.getElementById('cartCountBadge').innerText = totalQty;
+        }
+
+        function toggleCartDrawer() {
+            const overlay = document.getElementById('cartDrawerOverlay');
+            const drawer = document.getElementById('cartDrawer');
+            
+            if (drawer.classList.contains('translate-x-full')) {
+                overlay.classList.remove('hidden');
+                drawer.classList.remove('translate-x-full');
+                renderCartItems();
+            } else {
+                overlay.classList.add('hidden');
+                drawer.classList.add('translate-x-full');
+            }
+        }
+
+        function renderCartItems() {
+            const container = document.getElementById('cartItemsContainer');
+            if (APP_STATE.cart.length === 0) {
+                container.innerHTML = `<div class="text-center py-12 text-slate-400 text-xs">Keranjang Anda masih kosong.</div>`;
+                updateCartTotals();
+                return;
+            }
+
+            container.innerHTML = APP_STATE.cart.map((item, index) => `
+                <div class="flex items-center gap-3 pt-3 first:pt-0">
+                    <img src="${item.image}" alt="${item.title}" class="w-14 h-14 object-cover rounded-xl bg-slate-800">
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-xs line-clamp-1">${item.title}</h4>
+                        <p class="text-xs text-brand-600 font-bold">Rp ${item.price.toLocaleString('id-ID')}</p>
+                        <div class="flex items-center gap-2 mt-1">
+                            <button onclick="updateCartQty(${index}, -1)" class="w-5 h-5 rounded-md bg-slate-200 dark:bg-slate-800 text-xs font-bold">-</button>
+                            <span class="text-xs font-bold">${item.qty}</span>
+                            <button onclick="updateCartQty(${index}, 1)" class="w-5 h-5 rounded-md bg-slate-200 dark:bg-slate-800 text-xs font-bold">+</button>
+                        </div>
+                    </div>
+                    <button onclick="removeFromCart(${index})" class="text-slate-400 hover:text-red-500 text-xs p-1">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            updateCartTotals();
+        }
+
+        function updateCartQty(index, change) {
+            APP_STATE.cart[index].qty += change;
+            if (APP_STATE.cart[index].qty <= 0) {
+                APP_STATE.cart.splice(index, 1);
+            }
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function removeFromCart(index) {
+            APP_STATE.cart.splice(index, 1);
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function applyVoucherCode() {
+            const code = document.getElementById('voucherCodeInput').value.trim().toUpperCase();
+            if (code === 'UX2026') {
+                APP_STATE.voucherDiscount = 20000;
+                showToast('Voucher UX2026 berhasil dipasang! Potongan Rp 20.000');
+            } else {
+                showToast('Kode Voucher tidak valid');
+            }
+            updateCartTotals();
+        }
+
+        function updateCartTotals() {
+            const subtotal = APP_STATE.cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            const total = Math.max(0, subtotal - APP_STATE.voucherDiscount);
+
+            document.getElementById('cartSubtotal').innerText = `Rp ${subtotal.toLocaleString('id-ID')}`;
+            document.getElementById('cartDiscount').innerText = `Rp ${APP_STATE.voucherDiscount.toLocaleString('id-ID')}`;
+            document.getElementById('cartTotal').innerText = `Rp ${total.toLocaleString('id-ID')}`;
+        }
+
+        function handleCustomOrderSubmit(e) {
+            e.preventDefault();
+            const model = document.getElementById('customPhoneModel').value;
+            const category = document.getElementById('customCategorySelect').value;
+            const notes = document.getElementById('customNotes').value;
+
+            APP_STATE.cart.push({
+                id: Date.now(),
+                title: `[CUSTOM] ${category} (${model})`,
+                price: 150000,
+                image: 'https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80',
+                qty: 1
+            });
+
+            updateCartBadge();
+            toggleCartDrawer();
+            showToast('Pesanan Custom Anda dimasukkan ke keranjang!');
+            document.getElementById('customOrderForm').reset();
+        }
+
+        function openCheckoutModal() {
+            if (APP_STATE.cart.length === 0) {
+                showToast('Keranjang Anda kosong');
+                return;
+            }
+            toggleCartDrawer();
+            calculateShippingFee();
+            document.getElementById('checkoutModal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+        }
+
+        function calculateShippingFee() {
+            const prov = document.getElementById('checkoutProvince').value;
+            let fee = 15000;
+            if (prov === 'DKI Jakarta') fee = 12000;
+            if (prov === 'Luar Jawa') fee = 35000;
+
+            const subtotal = APP_STATE.cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            const grandTotal = Math.max(0, subtotal - APP_STATE.voucherDiscount) + fee;
+
+            document.getElementById('checkoutShippingFee').innerText = `Rp ${fee.toLocaleString('id-ID')}`;
+            document.getElementById('checkoutGrandTotal').innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
+        }
+
+        function handleCheckoutSubmit(e) {
+            e.preventDefault();
+            closeCheckoutModal();
+
+            const orderNum = `ORD-UX-2026-${Math.floor(100 + Math.random() * 900)}`;
+            const name = document.getElementById('checkoutName').value;
+            const phone = document.getElementById('checkoutPhone').value;
+            const grandTotalText = document.getElementById('checkoutGrandTotal').innerText;
+
+            document.getElementById('qrisOrderNum').innerText = orderNum;
+            document.getElementById('qrisPayAmount').innerText = grandTotalText;
+
+            // Push order to global state
+            APP_STATE.orders.unshift({
+                orderNumber: orderNum,
+                customerName: name,
+                whatsapp: phone,
+                itemsSummary: APP_STATE.cart.map(i => i.title).join(', '),
+                totalAmount: parseInt(grandTotalText.replace(/[^0-9]/g, '')),
+                time: new Date().toISOString().replace('T', ' ').substring(0, 16),
+                status: 'Menunggu Pembayaran'
+            });
+
+            renderAdminOrdersTable();
+            updateAdminStats();
+
+            // Open QRIS Modal
+            document.getElementById('qrisModal').classList.remove('hidden');
+        }
+
+        function closeQRISModal() {
+            document.getElementById('qrisModal').classList.add('hidden');
+            APP_STATE.cart = [];
+            updateCartBadge();
+        }
+
+        function simulatePaymentWebhookSuccess() {
+            const currentOrder = APP_STATE.orders[0];
+            if (currentOrder) {
+                currentOrder.status = 'Lunas';
+                renderAdminOrdersTable();
+                updateAdminStats();
+            }
+
+            closeQRISModal();
+            showToast('PAYMENT SUCCESS! Webhook notifikasi diterima: Status otomatis LUNAS', 'success');
+
+            // Send notification to WhatsApp Bot Window Simulator
+            const botBody = document.getElementById('waBotMessageBody');
+            botBody.innerHTML += `
+                <div class="bg-emerald-100 dark:bg-emerald-950 p-3 rounded-2xl border border-emerald-300 text-slate-800 dark:text-slate-100 space-y-1">
+                    <p class="font-bold text-emerald-700">🔔 AUTO NOTIFIKASI PESANAN:</p>
+                    <p class="text-[11px]">No. Pesanan: <b>${currentOrder.orderNumber}</b><br>
+                    Pembayaran sebesar <b>Rp ${currentOrder.totalAmount.toLocaleString('id-ID')}</b> telah diverifikasi <b>LUNAS</b>.<br>
+                    Status: <b>SIAP DIPRODUKSI</b> 🎉</p>
+                </div>
+            `;
+            botBody.scrollTop = botBody.scrollHeight;
+        }
+
+        function renderGallery() {
+            const container = document.getElementById('galleryGrid');
+            container.innerHTML = APP_STATE.gallery.map(item => `
+                <div onclick="openLightbox('${item.img}', '${item.title}')" class="relative group rounded-2xl overflow-hidden h-44 bg-slate-900 cursor-pointer shadow-md">
+                    <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3">
+                        <span class="text-[10px] font-bold text-pink-400 uppercase">${item.type}</span>
+                        <p class="text-xs text-white font-bold">${item.title}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openLightbox(imgUrl, title) {
+            showToast(`Membuka Lightbox Preview: ${title}`);
+        }
+
+        function openUploadModal() {
+            showToast('Form Upload Gambar Testimoni / Unboxing Pelanggan Siap Digunakan');
+        }
+
+        function renderTestimonials() {
+            const container = document.getElementById('testimonialContainer');
+            container.innerHTML = APP_STATE.testimonials.map(t => `
+                <div class="glass-card p-5 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 shadow-sm">
+                    <div class="flex text-amber-400 text-xs">
+                        ${'<i class="fa-solid fa-star"></i>'.repeat(t.stars)}
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 italic">"${t.text}"</p>
+                    <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs">
+                        <span class="font-bold text-slate-900 dark:text-white">${t.name}</span>
+                        <span class="text-[10px] text-slate-400">${t.city}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderFaqs() {
+            const container = document.getElementById('faqContainer');
+            container.innerHTML = APP_STATE.faqs.map(f => `
+                <div class="glass-card p-4 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-1">
+                    <h4 class="font-bold text-xs text-slate-900 dark:text-white flex items-center justify-between">
+                        <span><i class="fa-solid fa-circle-question text-brand-500 mr-2"></i> ${f.q}</span>
+                    </h4>
+                    <p class="text-xs text-slate-500 pl-6 mt-1">${f.a}</p>
+                </div>
+            `).join('');
+        }
+
+        function switchAdminTab(tabName) {
+            document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+                btn.className = 'admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 whitespace-nowrap';
+            });
+            document.querySelectorAll('.admin-tab-content').forEach(c => c.classList.add('hidden'));
+
+            document.getElementById(`tabBtn-${tabName}`).className = 'admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-600 text-white whitespace-nowrap';
+            document.getElementById(`adminTab-${tabName}`).classList.remove('hidden');
+        }
+
+        function renderAdminOrdersTable() {
+            const tbody = document.getElementById('adminOrdersTableBody');
+            tbody.innerHTML = APP_STATE.orders.map((o, idx) => `
+                <tr>
+                    <td class="p-3.5 font-mono font-bold text-brand-600">${o.orderNumber}</td>
+                    <td class="p-3.5">
+                        <p class="font-bold">${o.customerName}</p>
+                        <p class="text-[10px] text-slate-400">${o.whatsapp}</p>
+                    </td>
+                    <td class="p-3.5 text-slate-500 max-w-xs truncate">${o.itemsSummary}</td>
+                    <td class="p-3.5 font-bold">Rp ${o.totalAmount.toLocaleString('id-ID')}</td>
+                    <td class="p-3.5 text-[10px] text-slate-400">${o.time}</td>
+                    <td class="p-3.5">
+                        <span class="px-2.5 py-1 rounded-full text-[10px] font-bold ${getOrderStatusBadgeClass(o.status)}">
+                            ${o.status}
+                        </span>
+                    </td>
+                    <td class="p-3.5 text-center">
+                        <select onchange="updateOrderStatus(${idx}, this.value)" class="px-2 py-1 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-[11px]">
+                            <option value="Menunggu Pembayaran" ${o.status === 'Menunggu Pembayaran' ? 'selected' : ''}>Menunggu Pembayaran</option>
+                            <option value="Lunas" ${o.status === 'Lunas' ? 'selected' : ''}>Lunas (SIAP PRODUKSI)</option>
+                            <option value="Diproses" ${o.status === 'Diproses' ? 'selected' : ''}>Diproses</option>
+                            <option value="Sedang Digambar" ${o.status === 'Sedang Digambar' ? 'selected' : ''}>Sedang Digambar</option>
+                            <option value="Sedang Dicetak" ${o.status === 'Sedang Dicetak' ? 'selected' : ''}>Sedang Dicetak</option>
+                            <option value="Packing" ${o.status === 'Packing' ? 'selected' : ''}>Packing</option>
+                            <option value="Dikirim" ${o.status === 'Dikirim' ? 'selected' : ''}>Dikirim</option>
+                            <option value="Selesai" ${o.status === 'Selesai' ? 'selected' : ''}>Selesai</option>
+                        </select>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function getOrderStatusBadgeClass(status) {
+            switch(status) {
+                case 'Menunggu Pembayaran': return 'bg-amber-500/10 text-amber-600 border border-amber-300';
+                case 'Lunas': return 'bg-emerald-500/10 text-emerald-600 border border-emerald-300';
+                case 'Sedang Digambar':
+                case 'Sedang Dicetak': return 'bg-purple-500/10 text-purple-600 border border-purple-300';
+                case 'Dikirim': return 'bg-blue-500/10 text-blue-600 border border-blue-300';
+                case 'Selesai': return 'bg-slate-500/10 text-slate-600 border border-slate-300';
+                default: return 'bg-slate-100 text-slate-700';
+            }
+        }
+
+        function updateOrderStatus(idx, newStatus) {
+            APP_STATE.orders[idx].status = newStatus;
+            renderAdminOrdersTable();
+            updateAdminStats();
+            showToast(`Status pesanan ${APP_STATE.orders[idx].orderNumber} diubah menjadi "${newStatus}"`);
+        }
+
+        function filterOrdersTable() {
+            const query = document.getElementById('orderSearchInput').value.toLowerCase();
+            const rows = document.querySelectorAll('#adminOrdersTableBody tr');
+            rows.forEach(row => {
+                const text = row.innerText.toLowerCase();
+                row.style.display = text.includes(query) ? '' : 'none';
+            });
+        }
+
+        function updateAdminStats() {
+            document.getElementById('statTotalOrders').innerText = APP_STATE.orders.length;
+            document.getElementById('statPendingPayment').innerText = APP_STATE.orders.filter(o => o.status === 'Menunggu Pembayaran').length;
+            document.getElementById('statLunas').innerText = APP_STATE.orders.filter(o => o.status === 'Lunas').length;
+            document.getElementById('statInProduction').innerText = APP_STATE.orders.filter(o => ['Diproses', 'Sedang Digambar', 'Sedang Dicetak'].includes(o.status)).length;
+            document.getElementById('statShipping').innerText = APP_STATE.orders.filter(o => ['Packing', 'Dikirim'].includes(o.status)).length;
+            
+            const revenue = APP_STATE.orders.filter(o => o.status !== 'Menunggu Pembayaran').reduce((sum, o) => sum + o.totalAmount, 0);
+            document.getElementById('statTotalRevenue').innerText = `Rp ${revenue.toLocaleString('id-ID')}`;
+        }
+
+        function renderAdminProductsTable() {
+            const tbody = document.getElementById('adminProductsTableBody');
+            tbody.innerHTML = APP_STATE.products.map(p => `
+                <tr>
+                    <td class="p-3.5"><img src="${p.image}" class="w-10 h-10 object-cover rounded-lg"></td>
+                    <td class="p-3.5 font-bold">${p.title}</td>
+                    <td class="p-3.5 text-slate-400 capitalize">${p.category}</td>
+                    <td class="p-3.5 font-bold">Rp ${p.price.toLocaleString('id-ID')}</td>
+                    <td class="p-3.5">${p.stock} pcs</td>
+                    <td class="p-3.5 text-pink-500 font-bold">${p.badge || '-'}</td>
+                    <td class="p-3.5 text-center flex justify-center gap-2">
+                        <button onclick="showToast('Fitur Edit Produk ID: ${p.id}')" class="p-1.5 rounded bg-slate-100 text-slate-700"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <button onclick="showToast('Fitur Hapus Produk ID: ${p.id}')" class="p-1.5 rounded bg-red-100 text-red-600"><i class="fa-solid fa-trash text-xs"></i></button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function renderFileManager() {
+            const grid = document.getElementById('fileManagerGrid');
+            const files = [
+                { name: 'case-manga-01.jpg', size: '1.2 MB', url: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=300&q=80' },
+                { name: 'skyline-r34.png', size: '2.4 MB', url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=300&q=80' },
+                { name: 'totebag-graffiti.jpg', size: '850 KB', url: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=300&q=80' },
+                { name: 'qris-merchant-code.png', size: '420 KB', url: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=UXCOLLECTION' }
+            ];
+
+            grid.innerHTML = files.map(f => `
+                <div class="glass-card p-3 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-2 text-center text-[10px]">
+                    <img src="${f.url}" class="w-full h-24 object-cover rounded-xl">
+                    <p class="font-bold truncate text-slate-700 dark:text-slate-200">${f.name}</p>
+                    <p class="text-slate-400">${f.size}</p>
+                </div>
+            `).join('');
+        }
+
+        function simulateFileUpload() {
+            showToast('Simulasi upload gambar ke folder /assets/uploads/ berhasil!');
+        }
+
+        function openProductModal() {
+            showToast('Form Tambah Produk Baru Siap Digunakan');
+        }
+
+        function saveStoreSettings(e) {
+            e.preventDefault();
+            const storeName = document.getElementById('settingStoreName').value;
+            const address = document.getElementById('settingAddress').value;
+            const wa = document.getElementById('settingWA').value;
+
+            document.getElementById('footerAddress').innerText = address;
+            document.getElementById('footerPhoneDisplay').innerText = wa;
+
+            showToast('Pengaturan Toko Berhasil Disimpan!');
+        }
+
+        function toggleWABotWindow() {
+            document.getElementById('waChatWindow').classList.toggle('hidden');
+        }
+
+        function openWAChat(customMsg = '') {
+            const phone = "6281234567890";
+            const text = encodeURIComponent(customMsg || "Halo Admin UX Collection, saya ingin bertanya tentang custom art case.");
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+        }
+
+        function handleWABotMenu(option) {
+            const body = document.getElementById('waBotMessageBody');
+            let userMsg = '';
+            let botReply = '';
+
+            switch(option) {
+                case 'cek_pesanan':
+                    userMsg = 'Cek Pesanan Saya';
+                    botReply = 'Silakan ketikkan Nomor Pesanan Anda (misal: ORD-UX-2026-901) atau gunakan tombol Track Order di website.';
+                    break;
+                case 'cara_order':
+                    userMsg = 'Cara Order di UX Collection';
+                    botReply = '1. Pilih produk dari Katalog / Form Custom\n2. Masukkan ke Keranjang & Checkout\n3. Lakukan Pembayaran via QRIS Dinamis\n4. Status akan otomatis LUNAS & masuk tahap pengerjaan!';
+                    break;
+                case 'custom_desain':
+                    userMsg = 'Custom Desain Sendiri';
+                    botReply = 'Anda bisa mengunggah referensi foto di menu "Custom Studio" atau langsung kirimkan sampel gambar ke WhatsApp Admin!';
+                    break;
+                case 'hubungi_admin':
+                    userMsg = 'Hubungi Admin Langsung';
+                    botReply = 'Menghubungkan Anda ke Layanan Pelanggan WhatsApp UX Collection...';
+                    setTimeout(() => openWAChat(), 1000);
+                    break;
+            }
+
+            body.innerHTML += `
+                <div class="bg-brand-600 text-white p-2.5 rounded-2xl ml-auto max-w-[80%] text-[11px]">
+                    ${userMsg}
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 max-w-[85%] text-[11px] text-slate-700 dark:text-slate-200 whitespace-pre-line">
+                    <p class="font-bold text-emerald-600 mb-1">Bot Assistant:</p>
+                    ${botReply}
+                </div>
+            `;
+            body.scrollTop = body.scrollHeight;
+        }
+
+        function copySchemaSQL() {
+            const code = document.getElementById('sqlSchemaCode').innerText;
+            navigator.clipboard ? navigator.clipboard.writeText(code) : document.execCommand('copy');
+            showToast('Struktur SQL Database berhasil disalin!');
+        }
+
+        function exportProjectFiles() {
+            showToast('Mempersiapkan struktur file cPanel PHP Native (zip archive simulation)...');
+        }
+    </script>
+</body>
+</html>
