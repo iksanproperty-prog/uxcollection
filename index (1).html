@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Collection | Custom Hand Painted Premium Soft Case</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Pusat Custom Hand Painted Premium Soft Case untuk semua tipe smartphone. Lukisan tangan eksklusif, tahan lama, anti air & anti-gores. Pengiriman seluruh Indonesia.">
+    <meta name="keywords" content="UX Collection, custom casing hp, hand painted soft case, case anime, casing cirebon, custom case melukis, softcase premium">
+    <meta name="author" content="UX Collection">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uxcollection.com/">
+    <meta property="og:title" content="UX Collection - Custom Hand Painted Premium Soft Case">
+    <meta property="og:description" content="Ubah smartphone kamu menjadi karya seni lukisan tangan eksklusif berkualitas premium.">
+    <meta property="og:image" content="https://i.imgur.com/9x4PQlf.jpeg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UX Collection - Custom Hand Painted Case">
+    <meta name="twitter:description" content="Custom soft case lukis tangan presisi tinggi untuk berbagai brand smartphone.">
+    <meta name="twitter:image" content="https://i.imgur.com/9x4PQlf.jpeg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://i.imgur.com/9x4PQlf.jpeg">
+
+    <!-- Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "UX Collection",
+      "image": "https://i.imgur.com/9x4PQlf.jpeg",
+      "description": "Custom Hand Painted Premium Soft Case",
+      "telephone": "+6289676048554",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Perum Alana Village Pabedilan Blok 12A, Desa Pabedilan",
+        "addressLocality": "Ciledug, Kabupaten Cirebon",
+        "addressRegion": "Jawa Barat",
+        "postalCode": "45188",
+        "addressCountry": "ID"
+      },
+      "priceRange": "Rp 92.000 - Rp 135.000",
+      "openingHours": "Mo-Sa 09:00-21:00"
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            dark: '#090d16',
+                            accent: '#ec4899',
+                            gold: '#f59e0b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        graffiti: ['Permanent Marker', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Textured White Wall Background Effect */
+        body {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(#e2e8f0 0.8px, transparent 0.8px), 
+                radial-gradient(#e2e8f0 0.8px, #f8fafc 0.8px);
+            background-size: 28px 28px;
+            background-position: 0 0, 14px 14px;
+        }
+
+        .dark body {
+            background-color: #090d16;
+            background-image: 
+                radial-gradient(#1e293b 0.8px, transparent 0.8px), 
+                radial-gradient(#1e293b 0.8px, #090d16 0.8px);
+        }
+
+        /* Glassmorphism Styles */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .dark .glass-panel {
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        /* Graffiti Logo Text */
+        .graffiti-text {
+            font-family: 'Permanent Marker', cursive;
+            background: linear-gradient(135deg, #111827, #6b21a8, #ec4899, #8b5cf6);
+            background-size: 250% 250%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 8s ease infinite;
+        }
+
+        .dark .graffiti-text {
+            background: linear-gradient(135deg, #ffffff, #c084fc, #f472b6, #38bdf8);
+            background-size: 250% 250%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Wiggle Animation for WhatsApp Floating */
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-8deg); }
+            50% { transform: rotate(8deg); }
+        }
+        .animate-wiggle {
+            animation: wiggle 1.2s infinite ease-in-out;
+        }
+
+        /* Hide scrollbars for smooth horizontal sliders */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Image Zoom Styling */
+        .zoom-container {
+            overflow: hidden;
+        }
+        .zoom-container img {
+            transition: transform 0.4s ease;
+        }
+        .zoom-container:hover img {
+            transform: scale(1.15);
+        }
+    </style>
+</head>
+<body class="text-slate-800 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-purple-600 selection:text-white transition-colors duration-300">
+
+    <!-- Initial Loading Screen -->
+    <div id="loadingScreen" class="fixed inset-0 z-50 bg-white dark:bg-slate-950 flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="relative flex items-center justify-center">
+            <div class="w-20 h-20 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin"></div>
+            <img src="https://i.imgur.com/9x4PQlf.jpeg" alt="UX Collection Logo" class="absolute w-10 h-10 rounded-full object-cover shadow-md">
+        </div>
+        <span class="mt-4 font-bold text-sm tracking-widest text-slate-600 dark:text-slate-300 uppercase">UX COLLECTION</span>
+        <span class="text-xs text-purple-600 dark:text-purple-400 mt-1 font-medium">Memuat Pengalaman Premium...</span>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-slate-900 via-purple-950 to-slate-900 text-white text-xs py-2 px-4 text-center font-semibold tracking-wide flex justify-between items-center z-40 border-b border-purple-900/40">
+        <div class="container mx-auto flex justify-between items-center">
+            <span class="hidden md:inline-flex items-center gap-2"><i class="fa-solid fa-paintbrush text-amber-400"></i> 100% Lukisan Tangan Manual | Pengerjaan Presisi 2-3 Hari Kerja</span>
+            <div class="flex items-center space-x-3 mx-auto md:mx-0">
+                <span><i class="fa-solid fa-bolt text-amber-400 mr-1 animate-pulse"></i> Voucher Diskon: <strong class="bg-white/20 px-2 py-0.5 rounded text-amber-300">UXPREMIUM10</strong></span>
+            </div>
+            <span class="hidden lg:inline-flex items-center gap-1"><i class="fa-solid fa-truck-fast text-emerald-400"></i> Pengiriman Ke Seluruh Indonesia</span>
+        </div>
+    </div>
+
+    <!-- Navbar Sticky -->
+    <header class="sticky top-0 z-40 glass-panel shadow-sm transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            
+            <!-- Brand Logo & Name -->
+            <a href="#home" class="flex items-center space-x-3 group shrink-0">
+                <img src="https://i.imgur.com/9x4PQlf.jpeg" alt="UX Collection Logo" class="h-12 w-12 rounded-2xl object-cover shadow-md border-2 border-purple-500/30 group-hover:scale-105 transition-transform duration-300">
+                <div class="flex flex-col">
+                    <span class="graffiti-text text-xl md:text-2xl font-black leading-none tracking-tight">UX Collection</span>
+                    <span class="text-[10px] md:text-[11px] text-slate-500 dark:text-slate-400 font-medium tracking-tight mt-0.5">Custom Hand Painted Premium Soft Case</span>
+                </div>
+            </a>
+
+            <!-- Search Bar Desktop -->
+            <div class="hidden md:flex flex-1 max-w-md mx-4 relative">
+                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Cari anime / tipe HP (cth: Gojo, iPhone, Samsung)..." class="w-full pl-10 pr-10 py-2 text-xs rounded-full bg-slate-100/90 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all shadow-inner">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-2.5 text-slate-400 text-xs"></i>
+                <button onclick="clearSearch()" id="clearSearchBtn" class="hidden absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-6 text-xs font-bold tracking-wide uppercase">
+                <a href="#home" class="hover:text-purple-600 transition-colors">Home</a>
+                <a href="#katalog" class="hover:text-purple-600 transition-colors">Produk</a>
+                <a href="#tentang" class="hover:text-purple-600 transition-colors">Tentang</a>
+                <a href="#testimoni" class="hover:text-purple-600 transition-colors">Testimoni</a>
+                <a href="#kontak" class="hover:text-purple-600 transition-colors">Kontak</a>
+            </nav>
+
+            <!-- Actions (Dark Mode, Wishlist, Cart, Mobile Nav) -->
+            <div class="flex items-center space-x-2 md:space-x-3">
+                
+                <!-- Dark Mode Toggle -->
+                <button onclick="toggleDarkMode()" class="p-2.5 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Toggle Mode Gelap/Terang">
+                    <i class="fa-solid fa-moon text-base dark:hidden"></i>
+                    <i class="fa-solid fa-sun text-base hidden dark:block text-amber-400"></i>
+                </button>
+
+                <!-- Wishlist Button -->
+                <button onclick="openWishlistModal()" class="relative p-2.5 text-slate-600 dark:text-slate-300 hover:text-pink-600 transition-colors" title="Wishlist Favorit">
+                    <i class="fa-solid fa-heart text-lg"></i>
+                    <span id="wishlistBadge" class="absolute top-1 right-1 bg-pink-500 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
+                </button>
+
+                <!-- Cart Side Drawer Button -->
+                <button onclick="toggleCartDrawer()" class="relative bg-gradient-to-r from-slate-900 to-purple-900 hover:from-slate-800 hover:to-purple-800 text-white px-4 py-2 rounded-full shadow-md hover:shadow-purple-500/20 transition-all flex items-center space-x-2 font-semibold text-xs">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="hidden sm:inline">Keranjang</span>
+                    <span id="cartBadge" class="bg-purple-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-slate-700 dark:text-slate-200 p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Search Input -->
+        <div class="px-4 pb-3 md:hidden">
+            <div class="relative">
+                <input type="text" id="searchInputMobile" onkeyup="filterProductsMobile()" placeholder="Cari karakter anime / tipe HP..." class="w-full pl-9 pr-8 py-2 text-xs rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Nav Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-6 py-4 space-y-3 font-semibold text-xs uppercase tracking-wider">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-1 hover:text-purple-600">Home</a>
+            <a href="#katalog" onclick="toggleMobileMenu()" class="block py-1 hover:text-purple-600">Katalog Produk</a>
+            <a href="#tentang" onclick="toggleMobileMenu()" class="block py-1 hover:text-purple-600">Tentang Kami</a>
+            <a href="#testimoni" onclick="toggleMobileMenu()" class="block py-1 hover:text-purple-600">Testimoni Customer</a>
+            <a href="#kontak" onclick="toggleMobileMenu()" class="block py-1 hover:text-purple-600">Alamat &amp; Kontak</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- Hero Section -->
+        <section id="home" class="relative py-12 md:py-20 overflow-hidden">
+            <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-12">
+                
+                <!-- Hero Left Info -->
+                <div class="lg:w-1/2 space-y-6 text-center lg:text-left z-10">
+                    <div class="inline-flex items-center space-x-2 bg-purple-100 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-purple-200 dark:border-purple-800">
+                        <i class="fa-solid fa-crown text-amber-500"></i>
+                        <span>Luxury Hand-Painted Artwork Case</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                        Koleksi Custom <br class="hidden sm:inline">
+                        <span class="graffiti-text">Hand Painted Case Premium</span>
+                    </h1>
+
+                    <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        Lukisan tangan eksklusif untuk berbagai tipe smartphone. Dibuat secara manual dengan cat akrilik bermutu tinggi, terlindung lapisan *high-gloss varnish* yang tahan air dan tahan lama.
+                    </p>
+
+                    <!-- Hero CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
+                        <a href="#katalog" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-slate-900 hover:bg-purple-700 text-white dark:bg-white dark:text-slate-900 dark:hover:bg-purple-600 dark:hover:text-white font-bold shadow-xl transition-all text-center text-xs tracking-wider uppercase">
+                            <i class="fa-solid fa-bag-shopping mr-2"></i> Belanja Sekarang
+                        </a>
+                        <a href="#katalog" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-purple-100 hover:bg-purple-200 text-purple-800 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-purple-300 font-bold transition-all text-center text-xs tracking-wider uppercase">
+                            Lihat Produk
+                        </a>
+                        <a href="https://wa.me/6289676048554?text=Halo%20UX%20Collection,%20saya%20ingin%20konsultasi%20mengenai%20custom%20hand%20painted%20soft%20case" target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-full border-2 border-emerald-500 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold transition-all text-center flex items-center justify-center gap-2 text-xs tracking-wider uppercase shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Chat WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Brand Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200/80 dark:border-slate-800 text-center lg:text-left max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-xl md:text-2xl font-black text-purple-600 dark:text-purple-400">2,000+</div>
+                            <div class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold uppercase">Case Terjual</div>
+                        </div>
+                        <div>
+                            <div class="text-xl md:text-2xl font-black text-purple-600 dark:text-purple-400">100%</div>
+                            <div class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold uppercase">Hand Painted</div>
+                        </div>
+                        <div>
+                            <div class="text-xl md:text-2xl font-black text-purple-600 dark:text-purple-400">4.9 / 5</div>
+                            <div class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold uppercase">Rating Kepuasan</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Smartphone Graphic Showcase -->
+                <div class="lg:w-1/2 flex justify-center relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
+                    
+                    <!-- Floating Quality Badge -->
+                    <div class="absolute top-6 left-2 sm:left-6 bg-white/90 dark:bg-slate-900/90 backdrop-blur border border-slate-200 dark:border-slate-800 p-3 rounded-2xl shadow-xl z-20 flex items-center space-x-3">
+                        <img src="https://i.imgur.com/9x4PQlf.jpeg" alt="Badge Logo" class="w-10 h-10 rounded-xl object-cover">
+                        <div>
+                            <div class="text-xs font-bold">Cat Akrilik Premium</div>
+                            <div class="text-[10px] text-slate-500">Tahan Lama &amp; Anti-Gores</div>
+                        </div>
+                    </div>
+
+                    <!-- Smartphone Frame Case Mockup -->
+                    <div class="relative w-64 md:w-80 h-[480px] md:h-[540px] bg-slate-950 rounded-[45px] p-4 shadow-2xl border-4 border-slate-800 dark:border-slate-700 transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <!-- Camera Module -->
+                        <div class="absolute top-7 left-8 z-20 w-24 h-24 bg-slate-900 rounded-3xl border-2 border-slate-800 p-2 grid grid-cols-2 gap-2 shadow-inner">
+                            <div class="w-8 h-8 rounded-full bg-black border-2 border-slate-700 flex items-center justify-center">
+                                <div class="w-3 h-3 rounded-full bg-blue-900/80"></div>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-black border-2 border-slate-700 flex items-center justify-center">
+                                <div class="w-3 h-3 rounded-full bg-purple-900/80"></div>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-black border-2 border-slate-700 flex items-center justify-center">
+                                <div class="w-3 h-3 rounded-full bg-slate-900"></div>
+                            </div>
+                            <div class="w-4 h-4 rounded-full bg-amber-200/90 m-auto shadow-sm"></div>
+                        </div>
+
+                        <!-- Case Artwork Container -->
+                        <div class="w-full h-full rounded-[35px] overflow-hidden relative border-2 border-white/20 shadow-2xl bg-slate-900 flex items-center justify-center">
+                            <img id="heroShowcaseImg" src="https://i.imgur.com/bKjgnkQ.jpeg" alt="Hand Painted Soft Case" class="w-full h-full object-cover filter brightness-105 contrast-105">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Flash Sale & Countdown Timer -->
+        <section class="py-6 bg-gradient-to-r from-slate-900 via-purple-950 to-slate-900 text-white shadow-lg">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xl">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-extrabold uppercase tracking-wider text-amber-400">FLASH SALE PEKAN INI!</h3>
+                        <p class="text-xs text-slate-300">Dapatkan Diskon Spesial Hingga 30% Untuk Seluruh Katalog Case</p>
+                    </div>
+                </div>
+
+                <!-- Countdown Timer Display -->
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs font-semibold text-slate-300 uppercase tracking-widest hidden sm:inline">Berakhir dalam:</span>
+                    <div class="flex space-x-1.5 text-center text-slate-900 font-extrabold text-xs">
+                        <div class="bg-amber-400 rounded-lg px-2.5 py-1 min-w-[38px]">
+                            <span id="timerHours" class="text-sm block leading-none">09</span>
+                            <span class="text-[8px] uppercase tracking-tighter">Jam</span>
+                        </div>
+                        <span class="text-amber-400 font-bold self-center">:</span>
+                        <div class="bg-amber-400 rounded-lg px-2.5 py-1 min-w-[38px]">
+                            <span id="timerMinutes" class="text-sm block leading-none">45</span>
+                            <span class="text-[8px] uppercase tracking-tighter">Menit</span>
+                        </div>
+                        <span class="text-amber-400 font-bold self-center">:</span>
+                        <div class="bg-amber-400 rounded-lg px-2.5 py-1 min-w-[38px]">
+                            <span id="timerSeconds" class="text-sm block leading-none">22</span>
+                            <span class="text-[8px] uppercase tracking-tighter">Detik</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Catalog Section -->
+        <section id="katalog" class="py-16">
+            <div class="container mx-auto px-4">
+                
+                <!-- Section Header & Filter Tabs -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                    <div>
+                        <span class="text-xs font-extrabold text-purple-600 dark:text-purple-400 uppercase tracking-widest">Katalog Lukisan Tangan</span>
+                        <h2 class="text-2xl md:text-4xl font-extrabold mt-1">Pilihan Casing Hand Painted Eksklusif</h2>
+                    </div>
+
+                    <!-- Category Tabs -->
+                    <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar pb-2 md:pb-0">
+                        <button onclick="filterCategory('all')" class="cat-btn active px-4 py-2 rounded-full text-xs font-bold transition-all bg-slate-900 text-white dark:bg-white dark:text-slate-900 whitespace-nowrap">Semua Produk</button>
+                        <button onclick="filterCategory('terlaris')" class="cat-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 whitespace-nowrap">🔥 Terlaris</button>
+                        <button onclick="filterCategory('terbaru')" class="cat-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 whitespace-nowrap">✨ Terbaru</button>
+                        <button onclick="filterCategory('flashsale')" class="cat-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 whitespace-nowrap">⚡ Flash Sale</button>
+                    </div>
+                </div>
+
+                <!-- Product Grid Container -->
+                <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Dynamic Product Cards Injected by JavaScript -->
+                </div>
+
+                <!-- Empty State -->
+                <div id="noProductNotice" class="hidden text-center py-16">
+                    <i class="fa-solid fa-box-open text-5xl text-slate-300 dark:text-slate-700 mb-4"></i>
+                    <h3 class="text-base font-bold">Produk tidak ditemukan</h3>
+                    <p class="text-xs text-slate-500 mt-1">Coba gunakan kata kunci pencarian lain atau klik kategori Semua Produk.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="tentang" class="py-16 bg-slate-100/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800">
+            <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 relative">
+                    <img src="https://i.imgur.com/9x4PQlf.jpeg" alt="UX Collection Studio Logo" class="rounded-3xl shadow-2xl w-full max-h-[400px] object-cover border-4 border-white dark:border-slate-800">
+                    <div class="absolute -bottom-6 -right-6 bg-slate-900 text-white p-6 rounded-2xl shadow-xl hidden md:block max-w-xs border border-slate-800">
+                        <div class="text-2xl font-black mb-1">Hand-Painted Guarantee</div>
+                        <div class="text-xs leading-relaxed text-slate-300">Dikerjakan manual satu per satu oleh seniman berbakat untuk detail gambar maksimal.</div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 space-y-5">
+                    <span class="text-xs font-extrabold text-purple-600 dark:text-purple-400 uppercase tracking-widest">Tentang Kami</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold leading-tight">Mengenal Lebih Dekat Brand UX Collection</h2>
+                    <p class="text-slate-600 dark:text-slate-300 text-xs md:text-sm leading-relaxed">
+                        <strong>UX Collection</strong> merupakan jasa custom hand painted premium soft case yang dikerjakan secara manual menggunakan teknik lukis tangan sehingga setiap produk memiliki karakter unik dan eksklusif.
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 text-xs md:text-sm leading-relaxed">
+                        Berlokasi di Perum Alana Village Pabedilan Cirebon, kami berdedikasi menciptakan karya seni yang dapat dinikmati setiap hari di genggaman Anda. Kami menggunakan perpaduan cat akrilik fleksibel bermutu tinggi yang tidak retak saat casing ditekuk, serta dilindungi lapisan *clear coat varnish* premium.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2 text-xs">
+                        <div class="flex items-start space-x-2.5">
+                            <i class="fa-solid fa-check-circle text-purple-600 text-base mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold">Bisa Request Gambar</h4>
+                                <p class="text-[11px] text-slate-500">Kirim foto anime atau karya kamu</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-2.5">
+                            <i class="fa-solid fa-check-circle text-purple-600 text-base mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold">Bahan TPU Presisi</h4>
+                                <p class="text-[11px] text-slate-500">Lentur, presisi, pelindung kamera</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimoni" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-xl mx-auto mb-12">
+                    <span class="text-xs font-extrabold text-purple-600 dark:text-purple-400 uppercase tracking-widest">Ulasan Pelanggan</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mt-1">Apa Kata Mereka Tentang UX Collection?</h2>
+                    <p class="text-xs text-slate-500 mt-2">Ribuan pelanggan puas dengan hasil lukisan tangan yang rapi dan tahan lama.</p>
+                </div>
+
+                <!-- Testimonial Slider Container -->
+                <div class="relative max-w-4xl mx-auto overflow-hidden rounded-3xl p-2">
+                    <div id="testimonialSlider" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Slide 1 -->
+                        <div class="w-full shrink-0 px-4">
+                            <div class="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 text-center space-y-4 shadow-sm">
+                                <div class="flex justify-center text-amber-400 text-sm space-x-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-xs md:text-sm italic text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    "Detail lukisan Gojo-nya gila sih! Rapi banget sapuan kuasnya. Lapisan varnish nya halus dan nggak gampang gores pas dipake harian. Worth it banget!"
+                                </p>
+                                <div class="flex items-center justify-center space-x-3 pt-2">
+                                    <img src="https://i.imgur.com/9x4PQlf.jpeg" alt="Customer Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-purple-500">
+                                    <div class="text-left">
+                                        <div class="text-xs font-bold">Andra Pratama</div>
+                                        <div class="text-[10px] text-slate-400">Pembeli iPhone 14 Pro Case</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="w-full shrink-0 px-4">
+                            <div class="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 text-center space-y-4 shadow-sm">
+                                <div class="flex justify-center text-amber-400 text-sm space-x-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-xs md:text-sm italic text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    "Pesan custom Luffy Gear 5 buat kado ulang tahun. Hasil lukisannya presisi banget sama request gambar. Pelayanan via WhatsApp cepat & ramah!"
+                                </p>
+                                <div class="flex items-center justify-center space-x-3 pt-2">
+                                    <img src="https://i.imgur.com/9x4PQlf.jpeg" alt="Customer Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-purple-500">
+                                    <div class="text-left">
+                                        <div class="text-xs font-bold">Dina Marlina</div>
+                                        <div class="text-[10px] text-slate-400">Pembeli Samsung S23 Case</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="w-full shrink-0 px-4">
+                            <div class="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 text-center space-y-4 shadow-sm">
+                                <div class="flex justify-center text-amber-400 text-sm space-x-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-xs md:text-sm italic text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    "Pengiriman dari Pabedilan Cirebon ke Jakarta cuma 2 hari. Packing pakenya box exclusive tebal. Pas dipasang di Poco X6 presisi banget!"
+                                </p>
+                                <div class="flex items-center justify-center space-x-3 pt-2">
+                                    <img src="https://i.imgur.com/9x4PQlf.jpeg" alt="Customer Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-purple-500">
+                                    <div class="text-left">
+                                        <div class="text-xs font-bold">Fikri Zulkarnain</div>
+                                        <div class="text-[10px] text-slate-400">Pembeli Xiaomi Poco Case</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <button onclick="prevTesti()" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 dark:bg-slate-800/80 shadow flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-purple-600 hover:text-white transition-colors">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                    <button onclick="nextTesti()" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 dark:bg-slate-800/80 shadow flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-purple-600 hover:text-white transition-colors">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Address Section -->
+        <section id="kontak" class="py-16 bg-slate-100/80 dark:bg-slate-900/40 border-t border-slate-200/80 dark:border-slate-800">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Contact Information -->
+                    <div class="space-y-6">
+                        <span class="text-xs font-extrabold text-purple-600 dark:text-purple-400 uppercase tracking-widest">Informasi Kontak &amp; Studio</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold">Hubungi Kami atau Kunjungi Studio UX Collection</h2>
+                        <p class="text-slate-600 dark:text-slate-300 text-xs md:text-sm leading-relaxed">
+                            Kami melayani pemesanan ke seluruh pelosok Indonesia secara online via WhatsApp dan website resmi.
+                        </p>
+
+                        <div class="space-y-4 text-xs">
+                            <div class="flex items-start space-x-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950/60 text-purple-600 dark:text-purple-300 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-location-dot text-base"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Alamat Toko / Studio:</h4>
+                                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed mt-0.5">
+                                        Perum Alana Village Pabedilan, Desa Pabedilan, Kecamatan Ciledug, Kabupaten Cirebon, Jawa Barat, Blok 12A
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-300 flex items-center justify-center shrink-0">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">WhatsApp Official:</h4>
+                                    <p class="text-slate-500 dark:text-slate-400 mt-0.5">089676048554 (Customer Service Active)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950/60 text-blue-600 dark:text-blue-300 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-clock text-base"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Jam Operasional:</h4>
+                                    <p class="text-slate-500 dark:text-slate-400 mt-0.5">Senin - Sabtu: 09:00 - 21:00 WIB (Minggu Libur)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/6289676048554?text=Halo%20UX%20Collection,%20saya%20mau%20konsultasi%20desain%20casing" target="_blank" class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold text-xs shadow-lg transition-all tracking-wider uppercase">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Konsultasi Desain WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Google Maps Placeholder Frame -->
+                    <div class="h-80 md:h-96 rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-800 relative bg-slate-200 dark:bg-slate-800">
+                        <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.010101010101!2d108.7300000!3d-6.8800000!2m3!1f0!1f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTInNDguMCJTIDEwOMKwNDMnNDguMCJF!5e0!3m2!1sid!2sid!4v1650000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-900">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Brand Info -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://i.imgur.com/9x4PQlf.jpeg" alt="UX Collection Logo Footer" class="h-10 w-10 rounded-xl object-cover">
+                        <span class="graffiti-text text-xl font-bold">UX Collection</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Custom Hand Painted Premium Soft Case berkualitas tinggi. Lukisan tangan manual eksklusif untuk beragam brand &amp; tipe HP.
+                    </p>
+                    <div class="flex space-x-2.5 text-slate-300">
+                        <a href="https://wa.me/6289676048554" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-600 flex items-center justify-center transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-pink-600 flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-blue-600 flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://tiktok.com" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Navigasi Website</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home Banner</a></li>
+                        <li><a href="#katalog" class="hover:text-white transition-colors">Katalog Produk</a></li>
+                        <li><a href="#tentang" class="hover:text-white transition-colors">Tentang UX Collection</a></li>
+                        <li><a href="#testimoni" class="hover:text-white transition-colors">Testimoni Pelanggan</a></li>
+                        <li><a href="#kontak" class="hover:text-white transition-colors">Lokasi &amp; Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Supported Phone Brands -->
+                <div>
+                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Tipe HP Didukung</h4>
+                    <ul class="space-y-2">
+                        <li>iPhone Series (iPhone 11 - 15 Pro Max)</li>
+                        <li>Samsung Galaxy (S Series &amp; A Series)</li>
+                        <li>Xiaomi / Redmi / Poco</li>
+                        <li>Oppo / Realme / Vivo</li>
+                        <li>Infinix / Tecno</li>
+                    </ul>
+                </div>
+
+                <!-- Store Operational Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Alamat &amp; Operasional</h4>
+                    <p class="text-slate-400 leading-relaxed mb-2">
+                        Perum Alana Village Pabedilan, Desa Pabedilan, Kec. Ciledug, Kab. Cirebon, Jawa Barat, Blok 12A
+                    </p>
+                    <p class="text-emerald-400 font-semibold">
+                        <i class="fa-solid fa-clock mr-1"></i> Buka 09:00 - 21:00 WIB
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-12 pt-6 border-t border-slate-900 text-center text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; 2026 UX Collection. All Rights Reserved.</p>
+                <div class="flex items-center space-x-4 text-[11px]">
+                    <span>QRIS Ready</span>
+                    <span>Transfer Bank BCA / BRI / BNI / Mandiri</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Animated WhatsApp Button -->
+    <a href="https://wa.me/6289676048554?text=Halo%20UX%20Collection,%20saya%20ingin%20bertanya%20mengenai%20custom%20hand%20painted%20soft%20case" target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-emerald-600 transition-all hover:scale-110 group animate-wiggle" title="Chat Customer Service WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="absolute right-16 bg-slate-900 text-white text-[11px] font-semibold py-1.5 px-3 rounded-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">Chat WhatsApp CS</span>
+    </a>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()" class="hidden fixed bottom-24 right-6 z-40 bg-slate-800 text-white w-10 h-10 rounded-full shadow-xl flex items-center justify-center text-xs hover:bg-purple-600 transition-all">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Side Cart Drawer (Shopee / Shopify Style) -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-opacity duration-300 opacity-0">
+        <!-- Backdrop -->
+        <div id="cartBackdrop" onclick="toggleCartDrawer()" class="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
+
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white dark:bg-slate-900 shadow-2xl flex flex-col pointer-events-auto transform translate-x-full transition-transform duration-300 ease-in-out" id="cartContent">
+                
+                <!-- Drawer Header -->
+                <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-bag-shopping text-purple-600 text-lg"></i>
+                        <h3 class="font-bold text-base">Keranjang Belanja</h3>
+                    </div>
+                    <button onclick="toggleCartDrawer()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-2">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Drawer Cart Items Container -->
+                <div id="cartItemsContainer" class="flex-grow p-4 overflow-y-auto space-y-3">
+                    <!-- Dynamic Cart Items Rendered Here -->
+                </div>
+
+                <!-- Voucher & Checkout Drawer Footer -->
+                <div id="cartFooter" class="p-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/80 space-y-3">
+                    <!-- Voucher Code Input -->
+                    <div class="flex space-x-2">
+                        <input type="text" id="voucherInput" placeholder="Kode Voucher (cth: UXPREMIUM10)" class="flex-grow px-3 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 uppercase">
+                        <button onclick="applyVoucher()" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors">Pakai</button>
+                    </div>
+                    <div id="voucherMessage" class="text-[11px] font-medium hidden"></div>
+
+                    <!-- Subtotal & Calculations -->
+                    <div class="space-y-1.5 pt-1 text-xs">
+                        <div class="flex justify-between text-slate-500">
+                            <span>Subtotal Produk</span>
+                            <span id="cartSubtotal">Rp 0</span>
+                        </div>
+                        <div class="flex justify-between text-emerald-600 font-semibold hidden" id="discountRow">
+                            <span>Diskon Voucher</span>
+                            <span id="cartDiscount">-Rp 0</span>
+                        </div>
+                        <div class="flex justify-between font-extrabold text-sm pt-2 border-t border-slate-200 dark:border-slate-800">
+                            <span>Total Pembayaran</span>
+                            <span id="cartTotal" class="text-purple-600 dark:text-purple-400">Rp 0</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openCheckoutModal()" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white py-3 rounded-xl font-bold text-xs shadow-lg transition-all tracking-wider uppercase text-center">
+                        Lanjut ke Checkout <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal Popup -->
+    <div id="productDetailModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden overflow-y-auto">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-800 relative p-6 md:p-8 my-auto">
+            <button onclick="closeProductModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Image Gallery & Zoom -->
+                <div class="space-y-3">
+                    <div class="zoom-container rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800 h-80 flex items-center justify-center">
+                        <img id="modalMainImg" src="" alt="Product Detail" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex space-x-2 overflow-x-auto">
+                        <img id="modalThumb1" onclick="changeModalImg(this.src)" class="w-16 h-16 rounded-xl object-cover cursor-pointer border-2 border-purple-600">
+                        <img id="modalThumb2" onclick="changeModalImg(this.src)" class="w-16 h-16 rounded-xl object-cover cursor-pointer border-2 border-transparent hover:border-purple-600">
+                    </div>
+                </div>
+
+                <!-- Info & Form Selection -->
+                <div class="space-y-4">
+                    <div>
+                        <span id="modalBadge" class="text-[9px] font-black uppercase tracking-wider bg-purple-100 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 px-2.5 py-1 rounded-full">NEW</span>
+                        <h3 id="modalTitle" class="text-xl font-extrabold mt-2">Nama Produk Case</h3>
+                        <div class="flex items-center space-x-2 mt-1">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span id="modalRating" class="text-xs font-bold">4.9</span>
+                            <span id="modalReviews" class="text-xs text-slate-400">(50 ulasan)</span>
+                        </div>
+                    </div>
+
+                    <!-- Price Display -->
+                    <div class="flex items-baseline space-x-3">
+                        <span id="modalPromoPrice" class="text-2xl font-black text-purple-600 dark:text-purple-400">Rp 0</span>
+                        <span id="modalOriginalPrice" class="text-xs line-through text-slate-400">Rp 0</span>
+                        <span id="modalDiscountTag" class="text-xs font-bold text-red-500 bg-red-100 dark:bg-red-950/60 px-2 py-0.5 rounded">0% OFF</span>
+                    </div>
+
+                    <!-- Phone Model Selection -->
+                    <div>
+                        <label class="block text-xs font-bold mb-1">Pilih Brand &amp; Tipe HP:</label>
+                        <select id="modalPhoneModel" class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <option value="iPhone 15 Pro Max">iPhone 15 Pro Max</option>
+                            <option value="iPhone 15 / 15 Pro">iPhone 15 / 15 Pro</option>
+                            <option value="iPhone 14 / 14 Pro">iPhone 14 / 14 Pro</option>
+                            <option value="iPhone 13 / 13 Pro">iPhone 13 / 13 Pro</option>
+                            <option value="iPhone 11 / 12">iPhone 11 / 12</option>
+                            <option value="Samsung Galaxy S24 Ultra">Samsung Galaxy S24 Ultra</option>
+                            <option value="Samsung Galaxy A54 / A55">Samsung Galaxy A54 / A55</option>
+                            <option value="Xiaomi Poco X6 Pro / F5">Xiaomi Poco X6 Pro / F5</option>
+                            <option value="Oppo Reno 11 / 10">Oppo Reno 11 / 10</option>
+                            <option value="Vivo V30 / V29">Vivo V30 / V29</option>
+                            <option value="Infinix GT 20 Pro">Infinix GT 20 Pro</option>
+                        </select>
+                    </div>
+
+                    <!-- Finishing Choice (Glossy / Matte) -->
+                    <div>
+                        <label class="block text-xs font-bold mb-1">Pilih Finishing Coat:</label>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <label class="p-2 border rounded-xl flex items-center space-x-2 cursor-pointer border-purple-500 bg-purple-50 dark:bg-purple-950/40">
+                                <input type="radio" name="modalFinishing" value="High-Gloss Varnish" checked>
+                                <span class="font-semibold">Glossy Kilap</span>
+                            </label>
+                            <label class="p-2 border rounded-xl flex items-center space-x-2 cursor-pointer border-slate-200 dark:border-slate-700">
+                                <input type="radio" name="modalFinishing" value="Matte Doff Varnish">
+                                <span class="font-semibold">Matte Doff</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Specs & Processing time -->
+                    <div class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+                        <p id="modalDesc">Deskripsi ringkas lukisan casing hand painted.</p>
+                        <p class="font-semibold text-purple-600 dark:text-purple-400"><i class="fa-solid fa-paintbrush mr-1"></i> Estimasi Pengerjaan: 2-3 Hari Kerja</p>
+                    </div>
+
+                    <!-- Quantity Control & Modal Buttons -->
+                    <div class="flex items-center space-x-3 pt-2">
+                        <div class="flex items-center border border-slate-200 dark:border-slate-700 rounded-xl bg-slate-50 dark:bg-slate-800">
+                            <button onclick="adjustModalQty(-1)" class="px-3 py-1.5 text-slate-500 hover:text-slate-900 font-bold">-</button>
+                            <span id="modalQty" class="px-3 text-xs font-bold">1</span>
+                            <button onclick="adjustModalQty(1)" class="px-3 py-1.5 text-slate-500 hover:text-slate-900 font-bold">+</button>
+                        </div>
+
+                        <button onclick="addToCartFromModal()" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-2.5 rounded-xl text-xs font-bold shadow transition-colors flex items-center justify-center space-x-1.5">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Tambah Keranjang</span>
+                        </button>
+
+                        <button onclick="shareProduct()" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300" title="Bagikan Produk">
+                            <i class="fa-solid fa-share-nodes text-sm"></i>
+                        </button>
+                    </div>
+
+                    <a id="modalWaBtn" href="#" target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-2.5 rounded-xl text-xs font-bold shadow transition-colors flex items-center justify-center space-x-2 text-center block">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span>Beli Langsung via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm hidden overflow-y-auto">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-800 relative p-6 md:p-8 my-auto">
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <h3 class="text-lg font-extrabold mb-1 flex items-center">
+                <i class="fa-solid fa-shield-check text-emerald-500 mr-2"></i> Form Checkout Pesanan
+            </h3>
+            <p class="text-xs text-slate-500 mb-6">Isi data lengkap penerima untuk kalkulasi ongkir &amp; pemrosesan pesanan.</p>
+
+            <form id="checkoutForm" onsubmit="processCheckout(event)" class="space-y-4 text-xs">
+                
+                <!-- Personal Info -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold mb-1">Nama Lengkap *</label>
+                        <input type="text" id="custName" required placeholder="Nama Anda" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+                    </div>
+                    <div>
+                        <label class="block font-bold mb-1">Nomor WhatsApp *</label>
+                        <input type="tel" id="custPhone" required placeholder="08123456789" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold mb-1">Email (Opsional)</label>
+                    <input type="email" id="custEmail" placeholder="nama@email.com" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+                </div>
+
+                <!-- Address & Shipping -->
+                <div class="space-y-3 pt-2 border-t border-slate-100 dark:border-slate-800">
+                    <h4 class="font-bold text-purple-600 dark:text-purple-400">Alamat Pengiriman</h4>
+                    <div>
+                        <label class="block font-bold mb-1">Alamat Jalan / Perumahan / RT RW *</label>
+                        <textarea id="custAddress" required rows="2" placeholder="Nama Jalan, Perumahan, RT/RW" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800"></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                        <div>
+                            <label class="block font-bold mb-1">Provinsi *</label>
+                            <select id="custProv" onchange="calcOngkir()" required class="w-full px-2 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs">
+                                <option value="Jawa Barat">Jawa Barat</option>
+                                <option value="DKI Jakarta">DKI Jakarta</option>
+                                <option value="Jawa Tengah">Jawa Tengah</option>
+                                <option value="Jawa Timur">Jawa Timur</option>
+                                <option value="Banten">Banten</option>
+                                <option value="Luar Jawa">Luar Jawa</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-bold mb-1">Kabupaten/Kota *</label>
+                            <input type="text" id="custCity" required placeholder="Cirebon" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+                        </div>
+                        <div>
+                            <label class="block font-bold mb-1">Kecamatan *</label>
+                            <input type="text" id="custDistrict" required placeholder="Ciledug" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+                        </div>
+                        <div>
+                            <label class="block font-bold mb-1">Kode Pos</label>
+                            <input type="text" id="custZip" placeholder="45188" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notes -->
+                <div>
+                    <label class="block font-bold mb-1">Catatan Tambahan (Opsional)</label>
+                    <input type="text" id="custNotes" placeholder="Cth: Request tulisan nama kecil di sudut case" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+                </div>
+
+                <!-- RajaOngkir / Binderbyte API Shipping Cost Rate Display -->
+                <div class="p-3 bg-purple-50 dark:bg-purple-950/40 rounded-xl border border-purple-200 dark:border-purple-800 flex justify-between items-center">
+                    <div>
+                        <div class="font-bold text-purple-950 dark:text-purple-200">Estimasi Ongkos Kirim (JNE/J&amp;T/SiCepat)</div>
+                        <div class="text-[10px] text-slate-500">Dikirim dari Studio Pabedilan, Cirebon (Berat: ~200g)</div>
+                    </div>
+                    <span id="shippingFeeDisplay" class="font-extrabold text-sm text-purple-700 dark:text-purple-300">Rp 10.000</span>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="space-y-3 pt-2 border-t border-slate-100 dark:border-slate-800">
+                    <h4 class="font-bold text-purple-600 dark:text-purple-400">Metode Pembayaran</h4>
+                    
+                    <div class="grid grid-cols-2 gap-2">
+                        <label class="p-3 border rounded-xl flex items-center space-x-2 cursor-pointer hover:border-purple-500">
+                            <input type="radio" name="payMethod" value="QRIS" checked onchange="togglePayDetails('QRIS')">
+                            <span class="font-bold">QRIS Instant</span>
+                        </label>
+                        <label class="p-3 border rounded-xl flex items-center space-x-2 cursor-pointer hover:border-purple-500">
+                            <input type="radio" name="payMethod" value="Transfer Bank" onchange="togglePayDetails('BANK')">
+                            <span class="font-bold">Transfer Bank</span>
+                        </label>
+                    </div>
+
+                    <!-- Payment Details View -->
+                    <div id="payDetailsBox" class="p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl space-y-3">
+                        <div id="qrisView" class="text-center space-y-2">
+                            <p class="text-[11px] font-semibold">Scan QRIS UX Collection Menggunakan E-Wallet / Bank App:</p>
+                            <img src="https://i.imgur.com/9x4PQlf.jpeg" alt="QRIS Code" class="w-32 h-32 mx-auto rounded-xl border-2 border-white shadow object-cover">
+                            <p class="text-[10px] text-slate-500">Dukungan: BCA, GoPay, OVO, Dana, ShopeePay, Mandiri, BRI, BNI</p>
+                        </div>
+
+                        <div id="bankView" class="hidden space-y-2 text-xs">
+                            <p class="font-semibold text-slate-700 dark:text-slate-300">Pilih No. Rekening Tujuan Transfer:</p>
+                            
+                            <div class="bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                                <div>
+                                    <span class="font-bold block">BCA: 1234-5678-90</span>
+                                    <span class="text-[10px] text-slate-400">a/n UX Collection Cirebon</span>
+                                </div>
+                                <button type="button" onclick="copyToClipboard('1234567890')" class="text-purple-600 font-bold text-[10px] bg-purple-50 dark:bg-purple-950/60 px-2 py-1 rounded">Copy</button>
+                            </div>
+
+                            <div class="bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                                <div>
+                                    <span class="font-bold block">BRI: 0987-0100-2345-531</span>
+                                    <span class="text-[10px] text-slate-400">a/n UX Collection Cirebon</span>
+                                </div>
+                                <button type="button" onclick="copyToClipboard('098701002345531')" class="text-purple-600 font-bold text-[10px] bg-purple-50 dark:bg-purple-950/60 px-2 py-1 rounded">Copy</button>
+                            </div>
+
+                            <div class="bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                                <div>
+                                    <span class="font-bold block">Mandiri: 1370-0012-3456</span>
+                                    <span class="text-[10px] text-slate-400">a/n UX Collection Cirebon</span>
+                                </div>
+                                <button type="button" onclick="copyToClipboard('137000123456')" class="text-purple-600 font-bold text-[10px] bg-purple-50 dark:bg-purple-950/60 px-2 py-1 rounded">Copy</button>
+                            </div>
+
+                            <div class="bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                                <div>
+                                    <span class="font-bold block">BNI: 0123-4567-89</span>
+                                    <span class="text-[10px] text-slate-400">a/n UX Collection Cirebon</span>
+                                </div>
+                                <button type="button" onclick="copyToClipboard('0123456789')" class="text-purple-600 font-bold text-[10px] bg-purple-50 dark:bg-purple-950/60 px-2 py-1 rounded">Copy</button>
+                            </div>
+                        </div>
+
+                        <!-- Payment Proof Upload -->
+                        <div class="pt-2">
+                            <label class="block font-bold mb-1 text-[11px]">Upload Bukti Transfer / Pembayaran (Opsional)</label>
+                            <input type="file" id="payProof" accept="image/*" class="w-full text-[11px] text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:bg-purple-600 file:text-white file:font-semibold">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grand Total Display -->
+                <div class="flex justify-between items-center p-3.5 bg-slate-900 text-white rounded-2xl">
+                    <span class="font-bold">Total Pembayaran Akhir</span>
+                    <span id="finalCheckoutTotal" class="text-base font-black text-amber-400">Rp 0</span>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-3.5 rounded-xl font-extrabold text-xs shadow-xl transition-all flex items-center justify-center space-x-2 tracking-wider uppercase">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Pesan via WhatsApp</span>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div id="wishlistModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+            <button onclick="closeWishlistModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <h3 class="font-extrabold text-base mb-4 flex items-center text-pink-600">
+                <i class="fa-solid fa-heart mr-2"></i> Produk Wishlist Favorit
+            </h3>
+            <div id="wishlistItemsContainer" class="space-y-3 max-h-80 overflow-y-auto">
+                <!-- Wishlist Items Dynamically Loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Banner -->
+    <div id="toast" class="fixed top-20 right-4 z-50 bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-2xl flex items-center space-x-3 transform translate-x-full transition-transform duration-300 text-xs font-semibold border border-purple-500/40">
+        <i id="toastIcon" class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+        <span id="toastMsg">Produk berhasil ditambahkan!</span>
+    </div>
+
+    <script>
+        /*
+         * UX Collection Core Application JavaScript
+         * Full Product Data, Cart Management, Wishlist, Ongkir API Integration,
+         * Automatic WhatsApp Message Format Generator.
+         */
+
+        // PRODUCTS DATABASE (18 Catalog Items with exact image links provided)
+        const products = [
+            {
+                id: 1,
+                name: "Jujutsu Kaisen - Gojo Satoru Unlimited Expansion",
+                category: "terlaris",
+                price: 110000,
+                originalPrice: 150000,
+                rating: 5.0,
+                reviews: 84,
+                stock: 12,
+                badge: "BEST SELLER",
+                image: "https://i.imgur.com/bKjgnkQ.jpeg",
+                desc: "Hand painted soft case transparan Gojo Satoru dengan detail aura akrilik bergradasi presisi super halus.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 2,
+                name: "Naruto Shippuden - Sage Mode Eyes Softcase",
+                category: "terlaris",
+                price: 105000,
+                originalPrice: 140000,
+                rating: 4.9,
+                reviews: 62,
+                stock: 8,
+                badge: "BEST SELLER",
+                image: "https://i.imgur.com/bKjgnkQ.jpeg",
+                desc: "Casing lukis tangan motif mata Sage Mode Naruto dengan aksen kontras yang tajam dan elegan.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 3,
+                name: "One Piece - Luffy Gear 5 Sun God Nika",
+                category: "terbaru",
+                price: 120000,
+                originalPrice: 160000,
+                rating: 5.0,
+                reviews: 110,
+                stock: 15,
+                badge: "NEW",
+                image: "https://i.imgur.com/lbAplFH.jpeg",
+                desc: "Lukisan detail Sun God Nika Luffy dengan perpaduan warna putih, gading, dan aura emas menawan.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 4,
+                name: "Demon Slayer - Tanjiro & Nezuko Kamado Duo",
+                category: "flashsale",
+                price: 95000,
+                originalPrice: 135000,
+                rating: 4.8,
+                reviews: 49,
+                stock: 6,
+                badge: "FLASH SALE",
+                image: "https://i.imgur.com/NoMilOe.jpeg",
+                desc: "Potret Tanjiro dan Nezuko dalam satu casing softcase transparan yang memukau.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 5,
+                name: "Attack on Titan - Captain Levi Ackerman Custom",
+                category: "terlaris",
+                price: 115000,
+                originalPrice: 150000,
+                rating: 4.9,
+                reviews: 73,
+                stock: 10,
+                badge: "BEST SELLER",
+                image: "https://i.imgur.com/378NqeY.jpeg",
+                desc: "Ekspresi tajam Levi Ackerman dilukis dengan gaya shading monokromatis dan latar transparan.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 6,
+                name: "Cyberpunk Edgerunners - David & Lucy Cyber",
+                category: "terbaru",
+                price: 125000,
+                originalPrice: 165000,
+                rating: 4.9,
+                reviews: 38,
+                stock: 9,
+                badge: "NEW",
+                image: "https://i.imgur.com/BvhUYF3.jpeg",
+                desc: "Warna neons khas Cyberpunk Night City yang menyala pada casing smartphone kamu.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 7,
+                name: "Dragon Ball - Son Goku Ultra Instinct Mastered",
+                category: "flashsale",
+                price: 98000,
+                originalPrice: 140000,
+                rating: 4.8,
+                reviews: 55,
+                stock: 7,
+                badge: "FLASH SALE",
+                image: "https://i.imgur.com/HvHLlVJ.jpeg",
+                desc: "Aura perak bercahaya Goku Ultra Instinct dengan efek goresan kuas lukis langsung.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 8,
+                name: "Solo Leveling - Sung Jin-Woo Shadow Monarch",
+                category: "terlaris",
+                price: 120000,
+                originalPrice: 160000,
+                rating: 5.0,
+                reviews: 95,
+                stock: 14,
+                badge: "BEST SELLER",
+                image: "https://i.imgur.com/5w9mLDJ.jpeg",
+                desc: "Efek drakora dan prajurit bayangan Sung Jin-Woo dilukis dengan detail tingkat tinggi.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 9,
+                name: "Bleach - Ichigo Kurosaki Bankai Final Form",
+                category: "terbaru",
+                price: 110000,
+                originalPrice: 145000,
+                rating: 4.7,
+                reviews: 29,
+                stock: 11,
+                badge: "NEW",
+                image: "https://i.imgur.com/Ar4UUOm.jpeg",
+                desc: "Casing eksklusif lukisan Ichigo Bankai dengan sapuan kontras hitam-putih-merah.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 10,
+                name: "Hunter x Hunter - Killua Zoldyck Godspeed Aura",
+                category: "flashsale",
+                price: 99000,
+                originalPrice: 140000,
+                rating: 4.9,
+                reviews: 67,
+                stock: 5,
+                badge: "FLASH SALE",
+                image: "https://i.imgur.com/itiDsNj.jpeg",
+                desc: "Petir biru Godspeed Killua yang dilukis indah di sekeliling area kamera HP.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 11,
+                name: "Tokyo Ghoul - Ken Kaneki Awakened Mask",
+                category: "terlaris",
+                price: 115000,
+                originalPrice: 150000,
+                rating: 4.9,
+                reviews: 81,
+                stock: 13,
+                badge: "BEST SELLER",
+                image: "https://i.imgur.com/4ttTATU.jpeg",
+                desc: "Topeng Kaneki ikonik dengan tentakel kagune merah yang menyala di casing transparan.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 12,
+                name: "Chainsaw Man - Denji Pochita Transformation",
+                category: "terbaru",
+                price: 110000,
+                originalPrice: 145000,
+                rating: 4.8,
+                reviews: 42,
+                stock: 8,
+                badge: "NEW",
+                image: "https://i.imgur.com/r9wkQFs.jpeg",
+                desc: "Gaya seni komik kasar khas Chainsaw Man yang dibuat secara manual dengan kuas.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 13,
+                name: "My Hero Academia - Izuku Midoriya Deku One For All",
+                category: "flashsale",
+                price: 95000,
+                originalPrice: 130000,
+                rating: 4.7,
+                reviews: 31,
+                stock: 4,
+                badge: "FLASH SALE",
+                image: "https://i.imgur.com/YTeo0W0.jpeg",
+                desc: "Aura hijau kilat One For All Deku yang energik di atas bahan softcase lentur.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 14,
+                name: "Death Note - L Lawliet & Light Yagami Duel",
+                category: "terbaru",
+                price: 118000,
+                originalPrice: 155000,
+                rating: 4.9,
+                reviews: 50,
+                stock: 9,
+                badge: "NEW",
+                image: "https://i.imgur.com/j0w24il.jpeg",
+                desc: "Siluet estetik antara Light dan L dalam pertarungan kecerdasan Death Note.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 15,
+                name: "Spy x Family - Anya Forger Waku Waku Face",
+                category: "terlaris",
+                price: 105000,
+                originalPrice: 135000,
+                rating: 5.0,
+                reviews: 120,
+                stock: 18,
+                badge: "BEST SELLER",
+                image: "https://i.imgur.com/spmZiwf.jpeg",
+                desc: "Casing menggemaskan dengan ekspresi khas Anya Forger yang sangat mendetail.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 16,
+                name: "Neon Genesis Evangelion - EVA Unit-01 Test Type",
+                category: "terbaru",
+                price: 125000,
+                originalPrice: 165000,
+                rating: 4.9,
+                reviews: 36,
+                stock: 7,
+                badge: "NEW",
+                image: "https://i.imgur.com/MWHmI82.jpeg",
+                desc: "Perpaduan warna ungu dan hijau neon khas EVA-01 yang mecha-futuristik.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 17,
+                name: "Haikyuu!! - Hinata Shoyo Fly High Spike",
+                category: "flashsale",
+                price: 92000,
+                originalPrice: 130000,
+                rating: 4.8,
+                reviews: 28,
+                stock: 6,
+                badge: "FLASH SALE",
+                image: "https://i.imgur.com/zyLB46c.jpeg",
+                desc: "Momen Hinata melompat tinggi dilukis dengan energi dan semangat voli membara.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            },
+            {
+                id: 18,
+                name: "Berserk - Guts Black Swordsman Dark Custom",
+                category: "terlaris",
+                price: 130000,
+                originalPrice: 170000,
+                rating: 5.0,
+                reviews: 88,
+                stock: 10,
+                badge: "BEST SELLER",
+                image: "https://i.imgur.com/ec81Xl4.jpeg",
+                desc: "Karya seni lukisan kelam nan legendaris Guts dengan tekstur cat tebal eksklusif.",
+                specs: "Bahan TPU Softcase, Cat Akrilik Premium, Varnish Glossy/Matte, Waterproof."
+            }
+        ];
+
+        // STATE MANAGERS
+        let cart = [];
+        let wishlist = [];
+        let activeVoucher = null;
+        let selectedProductForModal = null;
+        let currentModalQty = 1;
+        let selectedOngkirRate = 10000;
+        let currentTestiIndex = 0;
+
+        // INITIALIZATION ON DOM LOAD
+        window.addEventListener('DOMContentLoaded', () => {
+            // Hide loading screen
+            setTimeout(() => {
+                const loader = document.getElementById('loadingScreen');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 500);
+                }
+            }, 800);
+
+            renderProducts(products);
+            startCountdownTimer();
+            startTestiAutoSlide();
+
+            // Scroll Listener for Scroll Top Button
+            window.addEventListener('scroll', () => {
+                const btn = document.getElementById('scrollTopBtn');
+                if (window.scrollY > 400) {
+                    btn.classList.remove('hidden');
+                } else {
+                    btn.classList.add('hidden');
+                }
+            });
+        });
+
+        // RENDER PRODUCTS GRID
+        function renderProducts(items) {
+            const grid = document.getElementById('productGrid');
+            const noProduct = document.getElementById('noProductNotice');
+
+            if (items.length === 0) {
+                grid.innerHTML = '';
+                noProduct.classList.remove('hidden');
+                return;
+            }
+
+            noProduct.classList.add('hidden');
+            grid.innerHTML = items.map(p => {
+                const discount = Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100);
+                const isWish = wishlist.some(w => w.id === p.id);
+
+                return `
+                <div class="glass-panel rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between group">
+                    <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-800 h-64">
+                        <img src="${p.image}" alt="${p.name}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Badges -->
+                        <div class="absolute top-3 left-3 flex flex-col gap-1">
+                            <span class="bg-purple-600 text-white text-[9px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow">${p.badge}</span>
+                            <span class="bg-red-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow">-${discount}%</span>
+                        </div>
+
+                        <!-- Wishlist Toggle -->
+                        <button onclick="toggleWishlist(${p.id})" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur flex items-center justify-center text-slate-400 hover:text-pink-600 shadow transition-colors">
+                            <i class="fa-solid fa-heart ${isWish ? 'text-pink-600' : ''}"></i>
+                        </button>
+                    </div>
+
+                    <div class="p-4 flex-grow flex flex-col justify-between space-y-3">
+                        <div>
+                            <div class="flex items-center justify-between text-xs mb-1">
+                                <span class="text-amber-500 font-bold flex items-center gap-1">
+                                    <i class="fa-solid fa-star text-xs"></i> ${p.rating}
+                                </span>
+                                <span class="text-slate-400 text-[10px]">${p.reviews} ulasan</span>
+                            </div>
+                            <h3 class="font-extrabold text-xs text-slate-800 dark:text-slate-100 line-clamp-2 hover:text-purple-600 cursor-pointer" onclick="openProductModal(${p.id})">
+                                ${p.name}
+                            </h3>
+                        </div>
+
+                        <div>
+                            <div class="flex items-baseline space-x-2">
+                                <span class="text-sm font-black text-purple-600 dark:text-purple-400">Rp ${p.price.toLocaleString('id-ID')}</span>
+                                <span class="text-[10px] line-through text-slate-400">Rp ${p.originalPrice.toLocaleString('id-ID')}</span>
+                            </div>
+                            <p class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold mt-0.5"><i class="fa-solid fa-check-circle text-[9px] mr-1"></i> Stok Ready: ${p.stock} pcs</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-100 dark:border-slate-800 text-xs">
+                            <button onclick="openProductModal(${p.id})" class="py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 font-bold transition-colors">
+                                Detail
+                            </button>
+                            <button onclick="addToCartQuick(${p.id})" class="py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold shadow transition-colors flex items-center justify-center space-x-1">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>+ Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        // CATEGORY FILTER
+        function filterCategory(cat) {
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-slate-900', 'text-white', 'dark:bg-white', 'dark:text-slate-900');
+                btn.classList.add('bg-slate-100', 'dark:bg-slate-800');
+            });
+            event.target.classList.add('bg-slate-900', 'text-white', 'dark:bg-white', 'dark:text-slate-900');
+
+            if (cat === 'all') {
+                renderProducts(products);
+            } else {
+                const filtered = products.filter(p => p.category === cat);
+                renderProducts(filtered);
+            }
+        }
+
+        // SEARCH REALTIME
+        function filterProducts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const clearBtn = document.getElementById('clearSearchBtn');
+            clearBtn.classList.toggle('hidden', query === '');
+
+            const filtered = products.filter(p => p.name.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query));
+            renderProducts(filtered);
+        }
+
+        function filterProductsMobile() {
+            const query = document.getElementById('searchInputMobile').value.toLowerCase();
+            const filtered = products.filter(p => p.name.toLowerCase().includes(query));
+            renderProducts(filtered);
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+            renderProducts(products);
+        }
+
+        // PRODUCT DETAIL MODAL
+        function openProductModal(id) {
+            const p = products.find(x => x.id === id);
+            if (!p) return;
+
+            selectedProductForModal = p;
+            currentModalQty = 1;
+
+            document.getElementById('modalMainImg').src = p.image;
+            document.getElementById('modalThumb1').src = p.image;
+            document.getElementById('modalThumb2').src = "https://i.imgur.com/9x4PQlf.jpeg";
+            document.getElementById('modalBadge').innerText = p.badge;
+            document.getElementById('modalTitle').innerText = p.name;
+            document.getElementById('modalRating').innerText = p.rating;
+            document.getElementById('modalReviews').innerText = `(${p.reviews} ulasan)`;
+            document.getElementById('modalPromoPrice').innerText = `Rp ${p.price.toLocaleString('id-ID')}`;
+            document.getElementById('modalOriginalPrice').innerText = `Rp ${p.originalPrice.toLocaleString('id-ID')}`;
+            const discount = Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100);
+            document.getElementById('modalDiscountTag').innerText = `${discount}% OFF`;
+            document.getElementById('modalDesc').innerText = p.desc;
+            document.getElementById('modalQty').innerText = currentModalQty;
+
+            // Direct WhatsApp button
+            updateModalWaLink();
+
+            document.getElementById('productDetailModal').classList.remove('hidden');
+        }
+
+        function updateModalWaLink() {
+            if(!selectedProductForModal) return;
+            const model = document.getElementById('modalPhoneModel').value;
+            const finishing = document.querySelector('input[name="modalFinishing"]:checked').value;
+            const text = encodeURIComponent(`Halo UX Collection, saya mau pesan produk: ${selectedProductForModal.name} \n- Tipe HP: ${model} \n- Finishing: ${finishing}`);
+            document.getElementById('modalWaBtn').href = `https://wa.me/6289676048554?text=${text}`;
+        }
+
+        function changeModalImg(src) {
+            document.getElementById('modalMainImg').src = src;
+        }
+
+        function closeProductModal() {
+            document.getElementById('productDetailModal').classList.add('hidden');
+        }
+
+        function adjustModalQty(val) {
+            currentModalQty = Math.max(1, currentModalQty + val);
+            document.getElementById('modalQty').innerText = currentModalQty;
+        }
+
+        // CART MANAGEMENT
+        function addToCartQuick(id) {
+            const p = products.find(x => x.id === id);
+            addToCart(p, "iPhone 15 Pro Max", "High-Gloss Varnish", 1);
+        }
+
+        function addToCartFromModal() {
+            if (!selectedProductForModal) return;
+            const phoneModel = document.getElementById('modalPhoneModel').value;
+            const finishing = document.querySelector('input[name="modalFinishing"]:checked').value;
+            addToCart(selectedProductForModal, phoneModel, finishing, currentModalQty);
+            closeProductModal();
+        }
+
+        function addToCart(product, phoneModel, finishing, qty) {
+            const existingIndex = cart.findIndex(item => item.id === product.id && item.phoneModel === phoneModel && item.finishing === finishing);
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += qty;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    phoneModel: phoneModel,
+                    finishing: finishing,
+                    qty: qty
+                });
+            }
+
+            updateCartUI();
+            showToast(`"${product.name.substring(0,22)}..." berhasil ditambahkan!`);
+        }
+
+        function updateCartQty(index, delta) {
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        function removeCartItem(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cartBadge');
+            const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
+            badge.innerText = totalQty;
+
+            const container = document.getElementById('cartItemsContainer');
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 text-slate-400">
+                        <i class="fa-solid fa-bag-shopping text-4xl mb-3"></i>
+                        <p class="text-xs">Keranjang Anda masih kosong.</p>
+                    </div>
+                `;
+                document.getElementById('cartSubtotal').innerText = "Rp 0";
+                document.getElementById('cartTotal').innerText = "Rp 0";
+                return;
+            }
+
+            container.innerHTML = cart.map((item, index) => `
+                <div class="flex items-center space-x-3 bg-slate-50 dark:bg-slate-800/60 p-3 rounded-2xl border border-slate-200/60 dark:border-slate-800">
+                    <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded-xl object-cover shrink-0">
+                    <div class="flex-grow min-w-0">
+                        <h4 class="font-bold text-xs truncate">${item.name}</h4>
+                        <span class="text-[10px] text-purple-600 dark:text-purple-400 font-semibold block">${item.phoneModel} (${item.finishing})</span>
+                        <div class="text-xs font-black mt-0.5">Rp ${(item.price * item.qty).toLocaleString('id-ID')}</div>
+                    </div>
+                    <div class="flex flex-col items-end space-y-1">
+                        <button onclick="removeCartItem(${index})" class="text-slate-400 hover:text-red-500 text-xs p-1">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <div class="flex items-center border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-xs">
+                            <button onclick="updateCartQty(${index}, -1)" class="px-2 py-0.5 font-bold text-slate-500">-</button>
+                            <span class="px-2 font-bold">${item.qty}</span>
+                            <button onclick="updateCartQty(${index}, 1)" class="px-2 py-0.5 font-bold text-slate-500">+</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Calculate Totals
+            const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+            let discountAmount = 0;
+
+            if (activeVoucher === 'UXPREMIUM10') {
+                discountAmount = subtotal * 0.1;
+                document.getElementById('discountRow').classList.remove('hidden');
+                document.getElementById('cartDiscount').innerText = `-Rp ${discountAmount.toLocaleString('id-ID')}`;
+            } else {
+                document.getElementById('discountRow').classList.add('hidden');
+            }
+
+            const total = subtotal - discountAmount;
+            document.getElementById('cartSubtotal').innerText = `Rp ${subtotal.toLocaleString('id-ID')}`;
+            document.getElementById('cartTotal').innerText = `Rp ${total.toLocaleString('id-ID')}`;
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            const content = document.getElementById('cartContent');
+
+            if (drawer.classList.contains('opacity-0')) {
+                drawer.classList.remove('opacity-0', 'pointer-events-none');
+                content.classList.remove('translate-x-full');
+            } else {
+                drawer.classList.add('opacity-0', 'pointer-events-none');
+                content.classList.add('translate-x-full');
+            }
+        }
+
+        // VOUCHER LOGIC
+        function applyVoucher() {
+            const code = document.getElementById('voucherInput').value.trim().toUpperCase();
+            const msg = document.getElementById('voucherMessage');
+
+            if (code === 'UXPREMIUM10') {
+                activeVoucher = 'UXPREMIUM10';
+                msg.innerText = "✓ Voucher UXPREMIUM10 Aktif! Diskon 10% diterapkan.";
+                msg.className = "text-[11px] font-bold text-emerald-500 block";
+                updateCartUI();
+            } else {
+                msg.innerText = "✕ Kode voucher tidak valid.";
+                msg.className = "text-[11px] font-bold text-red-500 block";
+            }
+        }
+
+        // CHECKOUT & ONGKIR LOGIC
+        function openCheckoutModal() {
+            if (cart.length === 0) {
+                showToast("Keranjang Anda masih kosong!", "error");
+                return;
+            }
+            toggleCartDrawer();
+            calcOngkir();
+            document.getElementById('checkoutModal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+        }
+
+        // Dynamic Shipping Cost Calculation (API Ready for RajaOngkir / Binderbyte)
+        function calcOngkir() {
+            const prov = document.getElementById('custProv').value;
+            if (prov === 'Jawa Barat' || prov === 'DKI Jakarta') {
+                selectedOngkirRate = 10000;
+            } else if (prov === 'Jawa Tengah' || prov === 'Jawa Timur' || prov === 'Banten') {
+                selectedOngkirRate = 15000;
+            } else {
+                selectedOngkirRate = 28000;
+            }
+
+            document.getElementById('shippingFeeDisplay').innerText = `Rp ${selectedOngkirRate.toLocaleString('id-ID')}`;
+            
+            // Calculate final payment total
+            const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+            const discount = activeVoucher === 'UXPREMIUM10' ? subtotal * 0.1 : 0;
+            const grandTotal = subtotal - discount + selectedOngkirRate;
+
+            document.getElementById('finalCheckoutTotal').innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
+        }
+
+        function togglePayDetails(type) {
+            if (type === 'QRIS') {
+                document.getElementById('qrisView').classList.remove('hidden');
+                document.getElementById('bankView').classList.add('hidden');
+            } else {
+                document.getElementById('qrisView').classList.add('hidden');
+                document.getElementById('bankView').classList.remove('hidden');
+            }
+        }
+
+        // WHATSAPP AUTO FORMATTED ORDER PROCESS
+        function processCheckout(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const address = document.getElementById('custAddress').value;
+            const prov = document.getElementById('custProv').value;
+            const city = document.getElementById('custCity').value;
+            const district = document.getElementById('custDistrict').value;
+            const zip = document.getElementById('custZip').value || '-';
+            const notes = document.getElementById('custNotes').value || '-';
+            const payMethod = document.querySelector('input[name="payMethod"]:checked').value;
+
+            const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+            const discount = activeVoucher === 'UXPREMIUM10' ? subtotal * 0.1 : 0;
+            const grandTotal = subtotal - discount + selectedOngkirRate;
+
+            let itemDetails = cart.map((item, i) => `${i+1}. ${item.name}\n   - Tipe HP: ${item.phoneModel}\n   - Finishing: ${item.finishing}\n   - Jumlah: ${item.qty} pcs x Rp ${item.price.toLocaleString('id-ID')}`).join('\n\n');
+
+            let waMsg = `*FORM PESANAN - UX COLLECTION*\n`;
+            waMsg += `====================================\n`;
+            waMsg += `*Nama Pembeli:* ${name}\n`;
+            waMsg += `*No. WhatsApp:* ${phone}\n`;
+            waMsg += `*Alamat Lengkap:* ${address}, Kec. ${district}, ${city}, ${prov} (${zip})\n`;
+            waMsg += `*Catatan:* ${notes}\n\n`;
+            waMsg += `*DAFTAR PRODUK PESANAN:*\n${itemDetails}\n\n`;
+            waMsg += `====================================\n`;
+            waMsg += `Subtotal Produk: Rp ${subtotal.toLocaleString('id-ID')}\n`;
+            if (discount > 0) waMsg += `Diskon Voucher: -Rp ${discount.toLocaleString('id-ID')}\n`;
+            waMsg += `Ongkos Kirim: Rp ${selectedOngkirRate.toLocaleString('id-ID')}\n`;
+            waMsg += `*TOTAL PEMBAYARAN: Rp ${grandTotal.toLocaleString('id-ID')}*\n`;
+            waMsg += `*Metode Pembayaran:* ${payMethod}\n\n`;
+            waMsg += `Mohon segera diproses kak, terima kasih!`;
+
+            const waURL = `https://wa.me/6289676048554?text=${encodeURIComponent(waMsg)}`;
+            
+            closeCheckoutModal();
+            cart = [];
+            updateCartUI();
+            showToast("Pesanan dibuat! Membuka WhatsApp CS...");
+            
+            setTimeout(() => {
+                window.open(waURL, '_blank');
+            }, 800);
+        }
+
+        // WISHLIST LOGIC
+        function toggleWishlist(id) {
+            const p = products.find(x => x.id === id);
+            const index = wishlist.findIndex(w => w.id === id);
+
+            if (index > -1) {
+                wishlist.splice(index, 1);
+                showToast("Dihapus dari wishlist favorit");
+            } else {
+                wishlist.push(p);
+                showToast("Disimpan ke wishlist favorit!");
+            }
+
+            const badge = document.getElementById('wishlistBadge');
+            badge.innerText = wishlist.length;
+            badge.classList.toggle('hidden', wishlist.length === 0);
+
+            renderProducts(products);
+        }
+
+        function openWishlistModal() {
+            const container = document.getElementById('wishlistItemsContainer');
+            if (wishlist.length === 0) {
+                container.innerHTML = `<p class="text-xs text-slate-400 text-center py-6">Belum ada produk favorit disimpan.</p>`;
+            } else {
+                container.innerHTML = wishlist.map(item => `
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex items-center space-x-3">
+                            <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-xl object-cover">
+                            <div>
+                                <h4 class="font-bold text-xs">${item.name}</h4>
+                                <span class="text-xs font-black text-purple-600 dark:text-purple-400">Rp ${item.price.toLocaleString('id-ID')}</span>
+                            </div>
+                        </div>
+                        <button onclick="openProductModal(${item.id}); closeWishlistModal();" class="text-xs bg-purple-600 text-white px-3 py-1.5 rounded-xl font-bold">Lihat</button>
+                    </div>
+                `).join('');
+            }
+
+            document.getElementById('wishlistModal').classList.remove('hidden');
+        }
+
+        function closeWishlistModal() {
+            document.getElementById('wishlistModal').classList.add('hidden');
+        }
+
+        // SHARE PRODUCT
+        function shareProduct() {
+            if (!selectedProductForModal) return;
+            const text = `Cek produk casing hand painted premium UX Collection: ${selectedProductForModal.name}`;
+            if (navigator.share) {
+                navigator.share({
+                    title: selectedProductForModal.name,
+                    text: text,
+                    url: window.location.href
+                }).catch(() => {});
+            } else {
+                const temp = document.createElement('input');
+                temp.value = window.location.href;
+                document.body.appendChild(temp);
+                temp.select();
+                document.execCommand('copy');
+                document.body.removeChild(temp);
+                showToast("Link produk berhasil disalin!");
+            }
+        }
+
+        // TESTIMONIAL SLIDER CONTROL
+        function startTestiAutoSlide() {
+            setInterval(() => {
+                nextTesti();
+            }, 6000);
+        }
+
+        function showTestiSlide(index) {
+            const slider = document.getElementById('testimonialSlider');
+            if (!slider) return;
+            currentTestiIndex = (index + 3) % 3;
+            slider.style.transform = `translateX(-${currentTestiIndex * 100}%)`;
+        }
+
+        function nextTesti() {
+            showTestiSlide(currentTestiIndex + 1);
+        }
+
+        function prevTesti() {
+            showTestiSlide(currentTestiIndex - 1);
+        }
+
+        // UTILITY FUNCTIONS
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function copyToClipboard(text) {
+            const temp = document.createElement('input');
+            temp.value = text;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand('copy');
+            document.body.removeChild(temp);
+            showToast("Nomor rekening berhasil disalin!");
+        }
+
+        function showToast(msg, type = "success") {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            const toastIcon = document.getElementById('toastIcon');
+
+            toastMsg.innerText = msg;
+            if (type === "error") {
+                toastIcon.className = "fa-solid fa-triangle-exclamation text-red-400 text-base";
+            } else {
+                toastIcon.className = "fa-solid fa-circle-check text-emerald-400 text-base";
+            }
+
+            toast.classList.remove('translate-x-full');
+            setTimeout(() => {
+                toast.classList.add('translate-x-full');
+            }, 3000);
+        }
+
+        // FLASH SALE TIMER COUNTDOWN
+        function startCountdownTimer() {
+            let duration = 9 * 3600 + 45 * 60 + 22; // 9 hrs 45 mins 22 secs
+            setInterval(() => {
+                if (duration <= 0) return;
+                duration--;
+                const h = Math.floor(duration / 3600);
+                const m = Math.floor((duration % 3600) / 60);
+                const s = duration % 60;
+
+                document.getElementById('timerHours').innerText = h.toString().padStart(2, '0');
+                document.getElementById('timerMinutes').innerText = m.toString().padStart(2, '0');
+                document.getElementById('timerSeconds').innerText = s.toString().padStart(2, '0');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
